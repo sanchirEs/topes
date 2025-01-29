@@ -18,6 +18,12 @@ class HomeController extends Controller
 
         return view('home');
     }
+    public function shop() 
+    {
+        $data = null;
+
+        return view('shop');
+    }
 
     public function blog($id)
     {
@@ -27,4 +33,5 @@ class HomeController extends Controller
 
         return view('blogdetail',$data);
     }
+
 }
