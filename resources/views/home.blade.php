@@ -5,8 +5,8 @@
         <!-- banner-section -->
         <section class="banner-section banner-style-two p_relative">
             <div class="shape">
-                <!-- <div class="shape-5 p_absolute l_0 b_0 z_2"></div> -->
-                <!-- <div class="shape-4 p_absolute l_0 b_0 z_2"></div> -->
+                <div class="shape-5 p_absolute l_0 b_0 z_2"></div>
+                <div class="shape-4 p_absolute l_0 b_0 z_2"></div>
             </div>
             <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
                 <div class="slide-item p_relative pt_120">
