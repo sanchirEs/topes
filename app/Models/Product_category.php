@@ -13,6 +13,8 @@ class Product_category extends Model
     protected $fillable = [
         'name',
         'slug',
+        'link',
+        'sort_order',
         'description',
     ];
 

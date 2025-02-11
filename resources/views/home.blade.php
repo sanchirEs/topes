@@ -49,39 +49,19 @@
             <div class="auto-container">
                 <div class="inner-container">
                     <div class="row clearfix">
+                        @foreach($services as $service)
                         <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
                             <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
                                 <div class="inner-box">
                                     <div class="shape-1"></div>
                                     <div class="shape-2"></div>
                                     <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5"><i class="icon-12"></i></div>
-                                    <h3 class="p_relative d_block"><a href="index-2.html">Цахилгааны цогц<br />Үйлчилгээ</a></h3>
-                                    <p>Барилгын цахилгаан, холбоо дохиолол, автоматжуулалт</p>
+                                    <h3 class="p_relative d_block"><a href="index-2.html">{!! $service->title !!}</a></h3>
+                                    <p>{{$service->description}}</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                            <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <div class="shape-1"></div>
-                                    <div class="shape-2"></div>
-                                    <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5"><i class="icon-13"></i></div>
-                                    <h3 class="p_relative d_block"><a href="index-2.html">Төхөөрөмжийн<br />худалдаа</a></h3>
-                                    <p>Дохиолол, домофоны тоног төхөөрөмжийн худалдаа</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
-                            <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
-                                <div class="inner-box">
-                                    <div class="shape-1"></div>
-                                    <div class="shape-2"></div>
-                                    <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5"><i class="icon-14"></i></div>
-                                    <h3 class="p_relative d_block"><a href="index-2.html">Гэмтэл шалгах,  <br />засвар, үйлчилгээ</a></h3>
-                                    <p>Угсралтын дараах гэмтэл шалгах, засвар үйлчилгээ</p>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

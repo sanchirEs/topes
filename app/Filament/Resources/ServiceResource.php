@@ -32,8 +32,7 @@ class ServiceResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
-                    ->image(),
+                Forms\Components\FileUpload::make('picture'),
                 Forms\Components\Toggle::make('status')
                     ->required(),
             ]);

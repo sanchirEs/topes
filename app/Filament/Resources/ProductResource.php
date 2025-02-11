@@ -45,6 +45,8 @@ class ProductResource extends Resource
                     ->prefix('$'),
                 Forms\Components\Toggle::make('status')
                     ->required(),
+                Forms\Components\Toggle::make('sort_order')
+                    ->required(),
             ]);
     }
 
@@ -64,6 +66,8 @@ class ProductResource extends Resource
                     ->money()
                     ->sortable(),
                 Tables\Columns\IconColumn::make('status')
+                    ->boolean(),
+                Tables\Columns\TextColumn::make('sort_order')
                     ->boolean(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()

@@ -16,20 +16,29 @@ class HomeController extends Controller
     {
         $data = null;
 
-        return view('home');
+        $data['services'] = Service::orderBy('id','ASC')->limit(3)->get();
+
+        return view('home',$data);
     }
     public function shop() 
     {
-        $data = null;
+        $data['products'] = Product::orderBy('sort_order','ASC')->get();
 
         return view('shop');
     }
 
-    public function product($id)
+    public function shopcategory($id) 
     {
-        $data['blog'] = Blog_post::where('id',$id)->first();
+        $data['category'] = Product_category::where('id',$id)->first();
 
-        $data['slides'] = Blog_gallery::where('blog_post_id',$id)->get();
+        $data['products'] = Product::where('Product_category_id',$id)->orderBy('sort_order','ASC')->get();
+
+        return view('shopcategory');
+    }
+
+    public function product($categorylink,$id)
+    {
+        $data['product'] = Product::where('id',$id)->with(['Product_category'])->first();
 
         return view('product',$data);
     }
