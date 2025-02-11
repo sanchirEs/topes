@@ -5,12 +5,12 @@
         <!-- banner-section -->
         <section class="banner-section banner-style-two p_relative">
             <div class="shape">
-                <div class="shape-5 p_absolute l_0 b_0 z_2"></div>
-                <div class="shape-4 p_absolute l_0 b_0 z_2"></div>
+                <!-- <div class="shape-5 p_absolute l_0 b_0 z_2"></div> -->
+                <!-- <div class="shape-4 p_absolute l_0 b_0 z_2"></div> -->
             </div>
             <div class="banner-carousel owl-theme owl-carousel owl-dots-none">
                 <div class="slide-item p_relative pt_120">
-                    <div class="image-layer p_absolute" style="background-image:url(/images/banner/banner-4.jpg)"></div>
+                    <div class="image-layer p_absolute" style="background-image:url(/images/banner/banner-1.jpg)"></div>
                     <div class="auto-container">
                         <div class="content-box p_relative d_block z_5">
                             <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_9">Монголын <span>шилдэг </span> цахилгааны үйлчилгээ</h2>
@@ -90,11 +90,11 @@
 
 
         <!-- about-style-two -->
-        <section class="about-style-two p_relative pb_120">
+        <section class="about-style-two p_relative pb_60 bg-white">
             <div class="auto-container">
                 <div class="sec-title p_relative mb_50 centred">
                     <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Бидний тухай</h5>
-                    <h2 class="d_block fs_40 lh_50 fw_bold">Орон сууц болон худалдааны<br/>барилгын цахилгаан үйлчилгээ</h2>
+                    <h2 class="d_block fs_40 lh_50 fw_bold">ТОП ЭЛЕКТРО СИГНАЛ ХХК</h2>
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -109,12 +109,12 @@
                                     <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 left-column">
                                             <div class="left-content">
-                                                <h4>🛠 Манай үйлчилгээний онцлог:</h4>
+                                                <h4>Манай үйлчилгээний онцлог:</h4>
                                                 <ul class="list-style-one clearfix">
                                                     <li>Олон жилийн туршлагатай цахилгааны инженерүүд</li>
-                                                    <li>Түргэн шуурхай, чанартай үйлчилгээ</li>
+                                                    <!-- <li>Түргэн шуурхай, чанартай үйлчилгээ</li> -->
                                                     <li>Олон улсын стандартын дагуу угсралт, суурилуулалт</li>
-                                                    <li>Ажлын баталгаат хугацаа</li>
+                                                    <!-- <li>Ажлын баталгаат хугацаа</li> -->
                                                 </ul>
                                                 <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Дэлгэрэнгүй</a></div>
                                             </div>
@@ -142,8 +142,8 @@
                                 <figure class="image-box"><img src="/images/resource/about-2.jpg" alt=""></figure>
                                 <div class="text centred">
                                     <div class="icon-box"><i class="icon-37"></i></div>
-                                    <p class="fs_20 lh_30 fw_medium mb_10">Яаралтай тусламж</p>
-                                    <h3><a href="tel:0124357689">+012 (435) 7689</a></h3>
+                                    <p class="fs_20 lh_30 fw_medium mb_10">Холбоо барих</p>
+                                    <h3><a href="tel:97691114532">+976 91114532</a></h3>
                                 </div>
                                 <div class="video-btn">
                                     <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image" data-caption=""><i class="icon-27"></i></a>
@@ -158,7 +158,7 @@
 
 
         <!-- service-style-two -->
-        <section class="service-style-two sec-pad">
+        <!-- <section class="service-style-two sec-pad">
             <div class="auto-container">
                 <div class="sec-title p_relative centred mb_50">
                     <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Манай үйлчилгээ</h5>
@@ -302,7 +302,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- service-style-two end -->
 
 
@@ -544,7 +544,7 @@
 
 
         <!-- testimonial-style-two -->
-        <section class="testimonial-style-two p_relative">
+        <!-- <section class="testimonial-style-two p_relative">
             <div class="auto-container">
                 <div class="sec-title p_relative mb_50 centred">
                     <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Сэтгэгдэл</h5>
@@ -625,7 +625,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- testimonial-style-two end -->
 
 
