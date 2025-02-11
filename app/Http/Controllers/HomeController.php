@@ -25,13 +25,13 @@ class HomeController extends Controller
         return view('shop');
     }
 
-    public function blog($id)
+    public function product($id)
     {
         $data['blog'] = Blog_post::where('id',$id)->first();
 
         $data['slides'] = Blog_gallery::where('blog_post_id',$id)->get();
 
-        return view('blogdetail',$data);
+        return view('product',$data);
     }
 
 }
