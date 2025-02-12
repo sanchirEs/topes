@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title'); // Service title
             $table->string('slug')->unique(); // Unique slug for SEO-friendly URLs
             $table->text('description'); // Service description
-            $table->string('image')->nullable(); // Path to the service image
+            $table->string('picture');// Path to the service image
             $table->tinyInteger('status')->default(1); // 1=active/visible, 0=inactive
             $table->timestamps(); // created_at and updated_at
         });

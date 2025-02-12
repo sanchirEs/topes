@@ -26,9 +26,15 @@ class ProductCategoryResource extends Resource
             Forms\Components\TextInput::make('name')
                 ->required()
                 ->maxLength(255),
+            Forms\Components\TextInput::make('link')
+                ->required()
+                ->maxLength(255),
             Forms\Components\TextInput::make('slug')
                 ->required()
                 ->maxLength(255),
+            Forms\Components\TextInput::make('sort_order')
+                ->required()
+                ->numeric(),
             Forms\Components\Textarea::make('description')
                 ->required()
                 ->maxLength(25500),
@@ -42,6 +48,8 @@ class ProductCategoryResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('sort_order')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
                     ->searchable(),

@@ -38,7 +38,7 @@
         <div id="search-popup" class="search-popup">
             <div class="popup-inner">
                 <div class="upper-box clearfix">
-                    <figure class="logo-box pull-left"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></figure>
+                    <figure class="logo-box pull-left"><a href="index.html"><img src="/images/logo.png" alt=""></a></figure>
                     <div class="close-search pull-right"><span class="far fa-times"></span></div>
                 </div>
                 <div class="overlay-layer"></div>
@@ -127,8 +127,8 @@
                                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                                 <ul class="navigation clearfix">
                                                     <li class="current dropdown"><a href="index.html">Нүүр</a></li>
-                                                    <li class="dropdown"><a href="index.html">Үйлчилгээ</a></li>
-                                                    <li class="dropdown"><a href="index.html">Бүтээгдэхүүн</a>
+                                                    <li class="dropdown"><a href="#">Үйлчилгээ</a></li>
+                                                    <li class="dropdown"><a href="/shop">Бүтээгдэхүүн</a>
                                                         <ul>
                                                             <li><a href="shop.html">Манай дэлгүүр</a></li>
                                                             <li><a href="shop-details.html">Дэлгүүрийн дэлгэрэнгүй</a></li>
@@ -175,7 +175,7 @@
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index-2.html"><img src="assets/images/logo-2.png" alt=""></a></figure>
+                            <figure class="logo"><a href="index-2.html"><img src="/images/logo-2.png" alt=""></a></figure>
                         </div>
                         <div class="menu-area clearfix">
                             <nav class="main-menu clearfix">
@@ -208,7 +208,7 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="assets/images/logo-2.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img src="/images/logo-2.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Цэс энд автоматаар Javascript-аар гарч ирнэ--></div>
                 <div class="contact-info">
                     <h4>Холбоо барих мэдээлэл</h4>
@@ -235,13 +235,13 @@
 
         <!-- үндсэн хөл -->
         <footer class="main-footer p_relative bg-color-2">
-            <div class="icon-layer"><img src="assets/images/icons/icon-5.png" alt=""></div>
+            <div class="icon-layer"><img src="/images/icons/icon-5.png" alt=""></div>
             <div class="footer-top p_relative d_block">
                 <div class="auto-container">
                     <div class="row clearfix">
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="assets/images/footer-logo.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index.html"><img src="/images/footer-logo.png" alt=""></a></figure>
                                 <div class="text">
                                     <p>Лорем ипсум долор сит амет, адиписик элит, сед эиусмод темпор incididunt ут labore dolore magna aliqua. Энэхүү хэсэг жишээний зориулалтаар орсон болно.</p>
                                 </div>

@@ -18,6 +18,7 @@ class Product extends Model
         'image',
         'price',
         'status',
+        'sort_order'
     ];
 
     public function Product_category():BelongsTo
