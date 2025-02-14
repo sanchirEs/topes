@@ -18,6 +18,8 @@ class HomeController extends Controller
 
         $data['services'] = Service::orderBy('id','ASC')->limit(3)->get();
 
+        $data['blogs'] = Blog_post::orderBy('id','DESC')->limit(4)->get();
+
         return view('home',$data);
     }
     public function shop() 

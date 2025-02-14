@@ -405,46 +405,18 @@
         <section class="project-section">
             <div class="outer-container">
                 <div class="project-carousel owl-carousel owl-theme owl-dots-none owl-nav-none">
+                    @foreach($blogs as $blog)
                     <div class="project-block-one">
                         <div class="inner-box">
                             <figure class="image-box"><img src="/images/project/project-1.jpg" alt=""></figure>
                             <div class="view-btn"><a href="/images/project/project-1.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
                             <div class="text">
-                                <h4><a href="project-details.html">Гэрийн цахилгааны засвар</a></h4>
-                                <span>Угсралт</span>
+                                <h4><a href="project-details.html">{{$blog->title}}</a></h4>
+                                <span>{{$blog->name}}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="project-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="/images/project/project-2.jpg" alt=""></figure>
-                            <div class="view-btn"><a href="/images/project/project-2.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
-                            <div class="text">
-                                <h4><a href="project-details.html">Гэрийн цахилгааны засвар</a></h4>
-                                <span>Угсралт</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="/images/project/project-3.jpg" alt=""></figure>
-                            <div class="view-btn"><a href="/images/project/project-3.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
-                            <div class="text">
-                                <h4><a href="project-details.html">Гэрийн цахилгааны засвар</a></h4>
-                                <span>Угсралт</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-block-one">
-                        <div class="inner-box">
-                            <figure class="image-box"><img src="/images/project/project-4.jpg" alt=""></figure>
-                            <div class="view-btn"><a href="/images/project/project-4.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
-                            <div class="text">
-                                <h4><a href="project-details.html">Гэрийн цахилгааны засвар</a></h4>
-                                <span>Угсралт</span>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
