@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('name'); // Product name
             $table->string('slug')->unique(); // Unique slug for product pages
             $table->text('description'); // Product description
-            $table->string('image')->nullable(); // Path to the product's main image
+            $table->string('picture'); // Path to the product's main image
             $table->decimal('price', 10, 2)->default(0.00); // Product price
             $table->tinyInteger('status')->default(1); // 1=active, 0=inactive
             $table->int('sort_order');

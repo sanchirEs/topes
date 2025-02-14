@@ -37,15 +37,14 @@ class ProductResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\FileUpload::make('image')
-                    ->image(),
+                Forms\Components\FileUpload::make('picture'),
                 Forms\Components\TextInput::make('price')
                     ->numeric()
                     ->default(0.00)
                     ->prefix('$'),
                 Forms\Components\Toggle::make('status')
                     ->required(),
-                Forms\Components\Toggle::make('sort_order')
+                Forms\Components\TextInput::make('sort_order')
                     ->required(),
             ]);
     }
@@ -61,14 +60,14 @@ class ProductResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
-                Tables\Columns\ImageColumn::make('image'),
+                Tables\Columns\ImageColumn::make('picture'),
                 Tables\Columns\TextColumn::make('price')
                     ->money()
                     ->sortable(),
                 Tables\Columns\IconColumn::make('status')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('sort_order')
-                    ->boolean(),
+                Tables\Columns\TextColumn::make('sort_order')
+                    ->numeric(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
