@@ -23,7 +23,7 @@ class BlogPostResource extends Resource
     {
         return $form
         ->schema([
-            Forms\Components\TextInput::make('author_name')
+            Forms\Components\TextInput::make('name')
                 ->required()
                 ->maxLength(255),
             Forms\Components\TextInput::make('title')
@@ -35,7 +35,7 @@ class BlogPostResource extends Resource
             Forms\Components\RichEditor::make('content')
                 ->required()
                 ->maxLength(25500),
-            Forms\Components\FileUpload::make('featured_image')
+            Forms\Components\FileUpload::make('picture')
                 ->default(null),
             Forms\Components\Toggle::make('status')
                 ->required(),
@@ -46,7 +46,7 @@ class BlogPostResource extends Resource
     {
         return $table
         ->columns([
-            Tables\Columns\TextColumn::make('author_name')
+            Tables\Columns\TextColumn::make('name')
                 ->searchable(),
             Tables\Columns\TextColumn::make('title')
                 ->searchable(),
@@ -54,7 +54,7 @@ class BlogPostResource extends Resource
                 ->searchable(),
             Tables\Columns\TextColumn::make('content')
                 ->searchable(),
-            Tables\Columns\ImageColumn::make('featured_image')
+            Tables\Columns\ImageColumn::make('picture')
                 ->searchable(),
             Tables\Columns\IconColumn::make('status')
                 ->boolean(),

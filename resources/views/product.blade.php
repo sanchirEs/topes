@@ -4,7 +4,7 @@
 
         <!-- Page Title -->
         <section class="page-title centred">
-            <div class="bg-layer parallax-bg" data-parallax='{"y": 100}' style="background-image: url(assets/images/background/page-title.jpg);"></div>
+            <div class="bg-layer parallax-bg" data-parallax='{"y": 100}' style="background-image: url(/images/background/page-title.jpg);"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h2>Shop Details</h2>
@@ -25,8 +25,8 @@
                     <div class="row clearfix">
                         <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                             <div class="image-box p_relative d_block">
-                                <figure class="image"><img src="assets/images/shop/shop-1.jpg" alt=""></figure>
-                                <div class="preview-link p_absolute t_20 r_20"><a href="assets/images/shop/shop-1.jpg" class="lightbox-image p_relative d_iblock fs_20 centred z_1 w_50 h_50 color_black lh_50" data-fancybox="gallery"><i class="icon-63"></i></a></div>
+                                <figure class="image"><img src="/images/shop/shop-1.jpg" alt=""></figure>
+                                <div class="preview-link p_absolute t_20 r_20"><a href="/images/shop/shop-1.jpg" class="lightbox-image p_relative d_iblock fs_20 centred z_1 w_50 h_50 color_black lh_50" data-fancybox="gallery"><i class="icon-63"></i></a></div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -85,7 +85,7 @@
                                     <div class="customer-review p_relative d_block pb_65 mb_65">
                                         <h4 class="p_relative d_block fs_20 lh_30 fw_medium fw_sbold mb_40">Classic Rechargeable Table Lamp Black</h4>
                                         <div class="comment-box p_relative d_block pl_110">
-                                            <figure class="comment-thumb p_absolute l_0 t_0 w_80 h_80 b_radius_55"><img src="assets/images/shop/comment-1.jpg" alt=""></figure>
+                                            <figure class="comment-thumb p_absolute l_0 t_0 w_80 h_80 b_radius_55"><img src="/images/shop/comment-1.jpg" alt=""></figure>
                                             <h5 class="d_block fs_18 lh_20 fw_sbold">Keanu Reeves<span class="d_iblock fs_16 font_family_poppins"> - May 1, 2021</span></h5>
                                             <ul class="rating clearfix mb_15">
                                                 <li class="p_relative d_iblock pull-left mr_3 fs_13"><i class="fas fa-star"></i></li>
@@ -146,12 +146,12 @@
                                 <div class="inner-box">
                                     <div class="image-box">
                                         <span class="hot">Hot</span>
-                                        <figure class="image"><img src="assets/images/shop/shop-48.png" alt=""></figure>
+                                        <figure class="image"><img src="/images/shop/shop-48.png" alt=""></figure>
                                         <ul class="option-list clearfix">
                                             <li><a href="shop.html"><i class="icon-57"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-62"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-61"></i></a></li>
-                                            <li><a href="assets/images/shop/shop-48.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
+                                            <li><a href="/images/shop/shop-48.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="lower-content">
@@ -172,12 +172,12 @@
                             <div class="shop-block-one">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><img src="assets/images/shop/shop-49.png" alt=""></figure>
+                                        <figure class="image"><img src="/images/shop/shop-49.png" alt=""></figure>
                                         <ul class="option-list clearfix">
                                             <li><a href="shop.html"><i class="icon-57"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-62"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-61"></i></a></li>
-                                            <li><a href="assets/images/shop/shop-49.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
+                                            <li><a href="/images/shop/shop-49.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="lower-content">
@@ -198,12 +198,12 @@
                             <div class="shop-block-one">
                                 <div class="inner-box">
                                     <div class="image-box">
-                                        <figure class="image"><img src="assets/images/shop/shop-50.png" alt=""></figure>
+                                        <figure class="image"><img src="/images/shop/shop-50.png" alt=""></figure>
                                         <ul class="option-list clearfix">
                                             <li><a href="shop.html"><i class="icon-57"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-62"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-61"></i></a></li>
-                                            <li><a href="assets/images/shop/shop-50.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
+                                            <li><a href="/images/shop/shop-50.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="lower-content">
@@ -225,12 +225,12 @@
                                 <div class="inner-box">
                                     <div class="image-box">
                                         <span class="sale">Sale</span>
-                                        <figure class="image"><img src="assets/images/shop/shop-51.png" alt=""></figure>
+                                        <figure class="image"><img src="/images/shop/shop-51.png" alt=""></figure>
                                         <ul class="option-list clearfix">
                                             <li><a href="shop.html"><i class="icon-57"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-62"></i></a></li>
                                             <li><a href="index-5.html"><i class="icon-61"></i></a></li>
-                                            <li><a href="assets/images/shop/shop-51.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
+                                            <li><a href="/images/shop/shop-51.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
                                         </ul>
                                     </div>
                                     <div class="lower-content">
@@ -254,7 +254,8 @@
         <!-- shop-details end -->
 
 
-        <!-- subscribe-section -->
+        <!-- subscribe-section 
+         
         <section class="subscribe-section p_relative bg-color-4">
             <div class="auto-container">
                 <div class="inner-container">
@@ -278,6 +279,7 @@
                 </div>
             </div>
         </section>
-        <!-- subscribe-section end -->
+
+         subscribe-section end -->
 
         @endsection

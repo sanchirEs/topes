@@ -27,7 +27,7 @@ class PartnerResource extends Resource
                     ->required()
                     ->maxLength(255),
                 Forms\Components\FileUpload::make('logo')
-                    ->maxLength(255)
+                    ->label('logo 200*44')
                     ->default(null),
                 Forms\Components\TextInput::make('link')
                     ->maxLength(255)
