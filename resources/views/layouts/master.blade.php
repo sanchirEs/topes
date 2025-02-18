@@ -158,23 +158,19 @@
                                         <nav class="main-menu navbar-expand-md navbar-light">
                                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                                 <ul class="navigation scroll-nav clearfix">
-                                                    <li class="dropdown"><a href="index-onepage.html">Home</a>
-                                                        <ul>
-                                                            <li><a href="index.html">Home Page 01</a></li>
-                                                            <li><a href="index-2.html">Home Page 02</a></li>
-                                                            <li><a href="index-3.html">Home Page 03</a></li>
-                                                            <li><a href="index-4.html">Home Page 04</a></li>
-                                                            <li><a href="index-5.html">Home Page 05</a></li>
-                                                            <li><a href="index-6.html">Home Page 06</a></li>
-                                                            <li><a href="index-onepage.html">OnePage Home</a></li>
-                                                            <li><a href="index-rtl.html">RTL Home</a></li>
-                                                        </ul>
+                                                    <li class="dropdown"><a href="/">Home</a>
                                                     </li>
                                                     <li><a href="#about">About</a></li>
                                                     <li><a href="#service">Services</a></li>
-                                                    <li><a href="#gallery">Gallery</a></li>
+                                                    <li class="dropdown"><a href="/shop">Бүтээгдэхүүн</a>
+                                                        <ul>
+                                                            @foreach($categories as $category)
+                                                            <li><a href="{{ url('shopcategory/'.$category->id) }}">{{ $category->name }}</a></li>
+                                                            @endforeach
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#gallery">Blog</a></li>
                                                     <li><a href="#testimonial">Testimonial</a></li>
-                                                    <li><a href="#news">News</a></li>
                                                 </ul>
                                             </div>
                                         </nav>
