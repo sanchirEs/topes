@@ -11,11 +11,11 @@ class Blog_post extends Model
     use HasFactory;
 
     protected $fillable = [
-        'author_name',
+        'name',
         'title',
         'slug',
         'content',
-        'featured_image',
+        'picture',
         'status',
     ];
 

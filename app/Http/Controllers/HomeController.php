@@ -20,22 +20,28 @@ class HomeController extends Controller
 
         $data['blogs'] = Blog_post::orderBy('id','DESC')->limit(4)->get();
 
+        $data['partners'] = Partner::orderBy('id','ASC')->get();
+
         return view('home',$data);
     }
     public function shop() 
     {
-        $data['products'] = Product::orderBy('sort_order','ASC')->get();
+        $data['products'] = Product::orderBy('sort_order','ASC')->with(['Product_category'])->paginate(9);
 
-        return view('shop');
+        $data['categories'] = Product_category::orderBy('sort_order','ASC')->get();
+
+        return view('shop',$data);
     }
 
     public function shopcategory($id) 
     {
-        $data['category'] = Product_category::where('id',$id)->first();
+        $data['selectedcategory'] = Product_category::where('id',$id)->first();
 
-        $data['products'] = Product::where('Product_category_id',$id)->orderBy('sort_order','ASC')->get();
+        $data['products'] = Product::where('Product_category_id',$id)->orderBy('sort_order','ASC')->paginate(9);
 
-        return view('shopcategory');
+        $data['categories'] = Product_category::where('id','!=',$id)->get();
+
+        return view('shopcategory',$data);
     }
 
     public function product($categorylink,$id)

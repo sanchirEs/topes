@@ -37,7 +37,8 @@ class ProductResource extends Resource
                 Forms\Components\Textarea::make('description')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\FileUpload::make('picture'),
+                Forms\Components\FileUpload::make('picture')
+                    ->label('Picture 270*250'),
                 Forms\Components\TextInput::make('price')
                     ->numeric()
                     ->default(0.00)
@@ -53,7 +54,7 @@ class ProductResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('product_category_id')
+                Tables\Columns\TextColumn::make('Product_category.name')
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
