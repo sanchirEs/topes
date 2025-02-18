@@ -70,7 +70,7 @@
 
 
         <!-- about-style-two -->
-        <section class="about-style-two p_relative pb_60 bg-white">
+        <section class="about-style-two p_relative pb_60 ">
             <div class="auto-container">
                 <div class="sec-title p_relative mb_50 centred">
                     <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Бидний тухай</h5>
