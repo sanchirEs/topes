@@ -26,7 +26,8 @@ WORKDIR /var/www/html
 # Copy project files
 COPY . .
 
-# Copy the Nginx config file to the correct directory
+# Remove default nginx config (if exists) and copy our config into /etc/nginx/conf.d/
+RUN rm -f /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Install Laravel dependencies
@@ -38,5 +39,5 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 # Expose static port 80
 EXPOSE 80
 
-# Start PHP-FPM and Nginx concurrently
+# Start PHP-FPM (background) and nginx in the foreground
 CMD ["sh", "-c", "php-fpm & nginx -g 'daemon off;'"]
