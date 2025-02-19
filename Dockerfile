@@ -1,8 +1,7 @@
 FROM php:8.2-fpm
 
-# Install dependencies including tzdata
+# Install necessary dependencies including Nginx
 RUN apt-get update && apt-get install -y \
-    tzdata \
     unzip \
     git \
     curl \
@@ -15,11 +14,6 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql bcmath zip intl
 
-# Set the desired time zone (e.g., Asia/Ulaanbaatar)
-ENV TZ=Asia/Ulaanbaatar
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-# Continue with your other Dockerfile steps...
 # Set up Git safe directory
 RUN git config --global --add safe.directory /var/www/html
 
@@ -32,8 +26,10 @@ WORKDIR /var/www/html
 # Copy project files
 COPY . .
 
-# Remove default nginx config and copy our config
+# Remove default Nginx configs that might conflict
 RUN rm -f /etc/nginx/conf.d/default.conf && rm -f /etc/nginx/sites-enabled/default
+
+# Copy our custom Nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Install Laravel dependencies
@@ -45,5 +41,5 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 # Expose port 80
 EXPOSE 80
 
-# Start PHP-FPM (daemon mode) and nginx in the foreground
+# Start PHP-FPM (daemonized) then Nginx in foreground
 CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
