@@ -1,8 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-       
-       
         <!-- banner-section -->
         <section class="banner-section banner-style-two p_relative">
             <div class="shape">
