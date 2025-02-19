@@ -1,11 +1,10 @@
 FROM php:8.2-fpm
 
-# Install dependencies
+# Install dependencies (note: nginx is NOT installed here)
 RUN apt-get update && apt-get install -y \
     unzip \
     git \
     curl \
-    nginx \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
@@ -26,14 +25,11 @@ WORKDIR /var/www/html
 # Copy project files
 COPY . .
 
-COPY nginx.conf /etc/nginx/nginx.conf
-
-
 # Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
 
-# Set permissions
+# Set permissions for Laravel folders
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Start Nginx and PHP-FPM together
-CMD service nginx start && php-fpm
+# Start PHP-FPM
+CMD ["php-fpm"]
