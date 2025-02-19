@@ -23,9 +23,11 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project files and Nginx config
+# Copy project files
 COPY . .
-COPY nginx.conf /etc/nginx/nginx.conf
+
+# Copy the Nginx config file to the correct directory
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
@@ -33,8 +35,8 @@ RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
 # Set proper permissions for Laravel storage folders
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Expose port 80 (static)
+# Expose static port 80
 EXPOSE 80
 
-# Start both PHP-FPM and Nginx concurrently
+# Start PHP-FPM and Nginx concurrently
 CMD ["sh", "-c", "php-fpm & nginx -g 'daemon off;'"]
