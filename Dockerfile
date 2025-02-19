@@ -5,6 +5,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     git \
     curl \
+    nginx \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
@@ -31,4 +32,5 @@ RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-CMD ["php-fpm"]
+# Start Nginx and PHP-FPM together
+CMD service nginx start && php-fpm
