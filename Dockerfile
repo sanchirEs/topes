@@ -26,8 +26,8 @@ WORKDIR /var/www/html
 # Copy project files
 COPY . .
 
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/nginx.conf
+
 
 # Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
