@@ -1,10 +1,11 @@
 FROM php:8.2-fpm
 
-# Install dependencies (note: nginx is NOT installed here)
+# Install dependencies including Nginx
 RUN apt-get update && apt-get install -y \
     unzip \
     git \
     curl \
+    nginx \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
@@ -22,14 +23,18 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project files
+# Copy project files and Nginx config
 COPY . .
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Install Laravel dependencies
 RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
 
-# Set permissions for Laravel folders
+# Set proper permissions for Laravel storage folders
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Start PHP-FPM
-CMD ["php-fpm"]
+# Expose port 80 (static)
+EXPOSE 80
+
+# Start both PHP-FPM and Nginx concurrently
+CMD ["sh", "-c", "php-fpm & nginx -g 'daemon off;'"]
