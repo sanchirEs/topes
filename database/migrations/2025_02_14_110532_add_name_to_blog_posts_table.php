@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::table('blog_posts', function (Blueprint $table) {
             
-            $table->string('name')->after('id');
+            if (!Schema::hasColumn('blog_posts', 'name')) {
+                $table->string('name')->after('id');
+            }
+            
         });
     }
 

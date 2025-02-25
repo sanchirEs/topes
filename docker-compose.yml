@@ -26,9 +26,9 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_DATABASE: topes
-      MYSQL_USER: root
-      MYSQL_PASSWORD: secret
+      MYSQL_DATABASE: topes_local
+      MYSQL_USER: laravel_local
+      MYSQL_PASSWORD: local_secret
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - mysql_data:/var/lib/mysql
