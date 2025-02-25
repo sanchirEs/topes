@@ -1,18 +1,27 @@
 FROM php:8.2-fpm
 
-# Install necessary dependencies including Nginx
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     unzip \
     git \
     curl \
-    nginx \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
-    libzip-dev \
     libicu-dev \
+    libzip-dev \
+    libonig-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd pdo pdo_mysql bcmath zip intl
+    && docker-php-ext-configure intl \
+    && docker-php-ext-install -j$(nproc) \
+        gd \
+        pdo_mysql \
+        zip \
+        intl \
+        mbstring \
+        opcache \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set up Git safe directory
 RUN git config --global --add safe.directory /var/www/html
@@ -23,23 +32,17 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 # Set working directory
 WORKDIR /var/www/html
 
-# Copy project files
+# Copy application files
 COPY . .
 
-# Remove default Nginx configs that might conflict
-RUN rm -f /etc/nginx/conf.d/default.conf && rm -f /etc/nginx/sites-enabled/default
+# Copy custom PHP-FPM configuration
+COPY php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
 
-# Copy our custom Nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Install Laravel dependencies
-RUN composer install --no-dev --optimize-autoloader --ignore-platform-reqs
-
-# Set proper permissions for Laravel storage folders
+# Ensure proper permissions
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Expose port 80
-EXPOSE 80
+# Expose port 9000 for PHP-FPM
+EXPOSE 9000
 
-# Start PHP-FPM (daemonized) then Nginx in foreground
-CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
+# Start PHP-FPM in foreground
+CMD ["php-fpm", "--nodaemonize"]
