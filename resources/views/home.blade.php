@@ -44,7 +44,7 @@
 
 
         <!-- feature-style-two -->
-        <section class="feature-style-two centred p_relative">
+        <section class="feature-style-two centred p_relative" id='service'>
             <div class="auto-container">
                 <div class="inner-container">
                     <div class="row clearfix">
@@ -72,40 +72,40 @@
         <section class="about-style-two p_relative pb_120" id="about">
             <div class="auto-container">
                 <div class="sec-title p_relative mb_50 centred">
-                    <h5 class="d_block fs_17 lh_25 fw_medium mb_9">About Us</h5>
-                    <h2 class="d_block fs_40 lh_50 fw_bold">Residential & Commercial <br />Electrical Services</h2>
+                    <h5 class="d_block fs_17 lh_25 fw_medium mb_9">БИДНИЙ ТУХАЙ</h5>
+                    <h2 class="d_block fs_40 lh_50 fw_bold">ТОП ЭЛЕКТРО СИГНАЛ ХХК  </h2>
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content_block_seven">
                             <div class="content-box">
                                 <div class="text p_relative d_block mb_25">
-                                    <p class="fw_medium bold-text mb_25">We can handle any of your electrical needs. We’re experienced in all jobs, small and large, and we’ll do our best every time.</p>
-                                    <p class="mb_25">Your safety is important to us. Our technicians are experts in the field along with being prompt, friendly, courteous, & willing to answer any questions you may have.</p>
-                                    <p>We know that your time is valuable so we pride ourselves on being on time to appointments and getting the job done right the first time.</p>
-                                </div>
+                                    <p class="fw_medium bold-text mb_25">Бид бүх төрлийн цахилгаан угсралт, суурилуулалт, уггал шалгалтыг найдвартай гүйцэтгэдэг.</p>
+                                    <p class="fw_medium bold-text mb_25">Таны цаг зав үнэ цэнэтэй учраас бид цагийн хуваарьтаа үргэлж нийцүүлэн, ажлыг эхний оролдлогоор чанартай гүйцэтгэхийг зорьдог.</p>
+                                    <!-- <p class="fw_medium bold-text mb_25">Бид бүх төрлийн цахилгаан угсралт, суурилуулалт, уггал шалгалтыг найдвартай гүйцэтгэдэг.  </p> -->
+                                    </div>
                                 <div class="inner-box">
                                     <div class="row clearfix">
                                         <div class="col-lg-6 col-md-6 col-sm-12 left-column">
                                             <div class="left-content">
-                                                <h4>Our Mission</h4>
+                                                <h4>Үйлчилгээний онцлог:</h4>
                                                 <ul class="list-style-one clearfix">
-                                                    <li>Emergency power solutions</li>
-                                                    <li>Wiring and installation</li>
-                                                    <li>Full-service electrical layout</li>
+                                                    <li>Олон жилийн туршлагатай цахилгаан инженерүүд </li>
+                                                    <li>Олон улсын стандартад нийцсэн угсралт, суурилуулалт</li>
+                                                    <li>Цахилгааны иж бүрэн зураг төсөл, төлөвлөлт</li>
                                                 </ul>
-                                                <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Discover more</a></div>
+                                                <!-- <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Discover more</a></div> -->
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 right-column">
                                             <div class="right-content mt_8">
                                                 <div class="single-item">
                                                     <div class="icon-box"><i class="icon-10"></i></div>
-                                                    <h4>Rewiring and Check-up</h4>
+                                                    <h4>Шинэчлэн угсралт, үзлэг шалгалт</h4>
                                                 </div>
                                                 <div class="single-item">
                                                     <div class="icon-box"><i class="icon-9"></i></div>
-                                                    <h4>Emergency Repairs</h4>
+                                                    <h4>Яаралтай засвар үйлчилгээ </h4>
                                                 </div>
                                             </div>
                                         </div>
@@ -117,13 +117,13 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content_block_eight">
                             <div class="content-box ml_30 pl_70 pb_40">
-                                <figure class="image-box"><img src="/images/resource/about-2.jpg" alt=""></figure>
+                                <figure class="image-box"><img src="/images/resource/project-4.jpg" alt=""></figure>
                                 <div class="text centred">
                                     <div class="icon-box"><i class="icon-37"></i></div>
-                                    <p class="fs_20 lh_30 fw_medium mb_10">For Emergency</p>
-                                    <h3><a href="tel:0124357689">+012 (435) 7689</a></h3>
+                                    <p class="fs_20 lh_30 fw_medium mb_10">Холбоо барих</p>
+                                    <h3><a href="tel:0124357689">+976 91114532 </a></h3>
                                 </div>
-                                <div class="video-btn">
+                                <div >
                                     <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image" data-caption=""><i class="icon-27"></i></a>
                                 </div>
                             </div>
@@ -136,7 +136,7 @@
 
 
         <!-- service-style-two -->
-        <section class="service-style-two sec-pad" id="service">
+        <!-- <section class="service-style-two sec-pad" id="service">
             <div class="auto-container">
                 <div class="sec-title p_relative centred mb_50">
                     <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Our Services</h5>
@@ -161,7 +161,7 @@
                     @endforeach
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- service-style-two end -->
 
 
@@ -177,7 +177,7 @@
                                     <div class="count-outer count-box">
                                         <span class="count-text" data-speed="1500" data-stop="90">0</span>
                                     </div>
-                                    <p>Successful projects</p>
+                                    <p>Амжилттай төслүүд</p>
                                 </div>
                             </div>
                         </div>
@@ -188,7 +188,7 @@
                                     <div class="count-outer count-box">
                                         <span class="count-text" data-speed="1500" data-stop="2.6">0</span><span>m</span>
                                     </div>
-                                    <p>Satisfied Clients</p>
+                                    <p>Үйлчлүүлэгчид</p>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                                     <div class="count-outer count-box">
                                         <span class="count-text" data-speed="1500" data-stop="35">0</span>
                                     </div>
-                                    <p>Experienced Staff</p>
+                                    <p>Энжинерүүд</p>
                                 </div>
                             </div>
                         </div>
@@ -210,7 +210,7 @@
                                     <div class="count-outer count-box">
                                         <span class="count-text" data-speed="1500" data-stop="10">0</span>
                                     </div>
-                                    <p>Awards Win</p>
+                                    <p>Ажилласан жил</p>
                                 </div>
                             </div>
                         </div>
@@ -228,46 +228,46 @@
                 <div class="shape-2"></div>
                 <div class="shape-3" style="background-image: url(/images/shape/shape-14.png);"></div>
             </div>
-            <figure class="image-layer"><img src="/images/resource/chooseus-1.png" alt=""></figure>
+            <figure class="image-layer"><img src="/images/resource/vector-1.png" alt=""></figure>
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-9 col-md-12 col-sm-12 content-column">
                         <div class="content-box p_relative d_block mr_30">
                             <div class="sec-title p_relative mb_20">
                                 <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Why Choose Us</h5>
-                                <h2 class="d_block fs_40 lh_50 fw_bold">Great Reasons For People Choose Easton</h2>
+                                <h2 class="d_block fs_40 lh_50 fw_bold">Яагаад биднийг сонгох хэрэгтэй вэ?  </h2>
                             </div>
                             <div class="text p_relative d_block mb_40">
-                                <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam quis nostrud exercitation ullamco laboris nis ut aliquip ex ea commodo consequat.</p>
+                                <p>Таны аюулгүй байдал бидний хамгийн чухал зорилт. Манай туршлагатай инженерүүд болон техникчид эелдэг харилцаатай, цаг баримталдаг бөгөөд таны сонирхсон асуултад бүрэн дүүрэн, ойлгомжтой байдлаар хариулна.</p>
                             </div>
                             <div class="inner-box">
                                 <div class="row clearfix">
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item">
                                             <div class="icon-box"><i class="icon-21"></i></div>
-                                            <h4>Affordable Price</h4>
-                                            <p>Lorem ipsum dolor amet con adicing elit sed.</p>
+                                            <h4>Бодит үнэлгээтэй, оновчтой шийдэл</h4>
+                                            <!-- <p>Lorem ipsum dolor amet con adicing elit sed.</p> -->
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item">
                                             <div class="icon-box"><i class="icon-22"></i></div>
-                                            <h4>Quality Assistance</h4>
-                                            <p>Lorem ipsum dolor amet con adicing elit sed.</p>
+                                            <h4>Мэргэжлийн цахилгаан инженерүүд</h4>
+                                            <!-- <p>Lorem ipsum dolor amet con adicing elit sed.</p> -->
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item">
                                             <div class="icon-box"><i class="icon-23"></i></div>
-                                            <h4>Free Estimation</h4>
-                                            <p>Lorem ipsum dolor amet con adicing elit sed.</p>
+                                            <h4>Олон жилийн туршлагатай, найдвартай үйлчилгээ</h4>
+                                            <!-- <p>Lorem ipsum dolor amet con adicing elit sed.</p> -->
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item">
                                             <div class="icon-box"><i class="icon-25"></i></div>
-                                            <h4>Optimized Solutions</h4>
-                                            <p>Lorem ipsum dolor amet con adicing elit sed.</p>
+                                            <h4>24/7 холбоо барих боломжтой</h4>
+                                            <!-- <p>Lorem ipsum dolor amet con adicing elit sed.</p> -->
                                         </div>
                                     </div>
                                 </div>
@@ -398,7 +398,7 @@
 
 
         <!-- search-field-two -->
-        <section class="search-field-two p_relative">
+        <!-- <section class="search-field-two p_relative">
             <div class="pattern-layer" style="background-image: url(/images/shape/shape-17.png);"></div>
             <div class="auto-container">
                 <div class="title-text centred p_relative d_block">
@@ -427,13 +427,13 @@
                     </form>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- search-field-two end -->
 
 
         <!-- faq-section -->
         <section class="faq-section p_relative">
-            <div class="bg-layer" style="background-image: url(/images/resource/faq-3.jpg);"></div>
+            <div class="bg-layer" style="background-image: url(/images/resource/faq-1.jpg);"></div>
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -608,16 +608,16 @@
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content-box p_relative ml_70 mr_70">
                             <div class="sec-title light p_relative mb_13">
-                                <h5 class="d_block fs_17 lh_25 fw_medium mb_13">Contact</h5>
-                                <h2 class="d_block fs_40 lh_50 fw_bold">Need Help with The Best Electrical Services</h2>
+                                <h5 class="d_block fs_17 lh_25 fw_medium mb_13">Холбоо барих</h5>
+                                <h2 class="d_block fs_40 lh_50 fw_bold">Бидэнтэй хамтран ажиллахыг хүсвэл</h2>
                             </div>
                             <div class="text p_relative d_block">
-                                <p>All of our services are backed by our 100% satisfaction guarantee Our electricians can install anything.</p>
+                                <p>Бид харилцагч байгууллагууддаа найдвартай, өндөр чанартай цахилгаан угсралт, засвар үйлчилгээний цогц шийдлийг санал болгож байна. Хэрэв та мэргэжлийн, баталгаатай хамтын ажиллагааг эрэлхийлж байгаа бол бидэнтэй холбогдоорой.</p>
                             </div>
                             <div class="support-box">
                                 <div class="icon-box"><i class="icon-37"></i></div>
-                                <p>For Emergency</p>
-                                <h3><a href="tel:01243507689">+012-4350-7689</a></h3>
+                                <p>Яаралтай тусламж хэрэгтэй юу?</p>
+                                <h3><a href="tel:01243507689">+976-9911-4532</a></h3>
                             </div>
                         </div>
                     </div>

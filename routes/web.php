@@ -12,3 +12,6 @@ Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('shop', [HomeController::class, 'shop'])->name('shopdetail');
 Route::get('shopcategory/{id}', [HomeController::class, 'shopcategory'])->name('shopcategory');
 Route::get('{categorylink}/product/{id}', [HomeController::class, 'product'])->name('product');
+Route::post('/upload-file', [FileUploadController::class, 'upload']);
+
+

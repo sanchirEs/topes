@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
-<title>Easton - HTML 5 Template Preview</title>
+<title>Topes</title>
 
 <!-- Fav Icon -->
 <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -106,12 +106,12 @@
                     <div class="top-inner">
                         <div class="left-column">
                             <div class="text">
-                                <p><i class="icon-45"></i>Best Electrical Service in USA.</p>
+                                <p><i class="icon-45"></i>Top Электро Сигнал</p>
                             </div>
                         </div>
                         <div class="right-column">
                             <ul class="social-links clearfix">
-                                <li><p>Follow Us:</p></li>
+                                <li><p>Биднийг дагаарай:</p></li>
                                 <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
                                 <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
                                 <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
@@ -160,10 +160,10 @@
                                         <nav class="main-menu navbar-expand-md navbar-light">
                                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                                 <ul class="navigation scroll-nav clearfix">
-                                                    <li class="dropdown"><a href="/">Home</a>
+                                                    <li class="dropdown"><a href="/">Нүүр</a>
                                                     </li>
-                                                    <li><a href="#about">About</a></li>
-                                                    <li><a href="#service">Services</a></li>
+                                                    <li><a href="#about">Тухай</a></li>
+                                                    <li><a href="#service">Үйлчилгээ</a></li>
                                                     <li class="dropdown"><a href="/shop">Бүтээгдэхүүн</a>
                                                         <ul>
                                                             @foreach($categories as $category)
@@ -171,8 +171,8 @@
                                                             @endforeach
                                                         </ul>
                                                     </li>
-                                                    <li><a href="#gallery">Blog</a></li>
-                                                    <li><a href="#testimonial">Testimonial</a></li>
+                                                    <!-- <li><a href="#gallery">Blog</a></li> -->
+                                                    <!-- <li><a href="#testimonial">Testimonial</a></li> -->
                                                 </ul>
                                             </div>
                                         </nav>
@@ -184,7 +184,7 @@
                                         </div>
                                         -->
                                         <div class="btn-box">
-                                            <a href="index.html" class="theme-btn btn-one">Appointment</a>
+                                            <a href="index.html" class="theme-btn btn-one">Холбоо барих</a>
                                         </div>
                                     </div>
                                 </div>
@@ -214,7 +214,7 @@
                             </div>
                             -->
                             <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-one">Appointment</a>
+                                <a href="index.html" class="theme-btn btn-one">Холбоо барих</a>
                             </div>
                         </div>
                     </div>
@@ -232,11 +232,11 @@
                 <div class="nav-logo"><a href="index.html"><img src="/images/logo-2.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
                 <div class="contact-info">
-                    <h4>Contact Info</h4>
+                    <h4>Холбоо барих</h4>
                     <ul>
-                        <li>Chicago 12, Melborne City, USA</li>
-                        <li><a href="tel:+8801682648101">+88 01682648101</a></li>
-                        <li><a href="mailto:info@example.com">info@example.com</a></li>
+                        <li>Улаанбаатар хот, Баянгол дүүрэг, 16-р хороо, Амарсанаагийн гудамж, Гандан, 12В байр 14 тоот</li>
+                        <li><a href="tel:+8801682648101">+976 99114532</a></li>
+                        <li><a href="mailto:info@example.com">info@topes.mn</a></li>
                     </ul>
                 </div>
                 <div class="social-links">
@@ -263,25 +263,21 @@
                     <div class="row clearfix">
                         <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget logo-widget">
-                                <figure class="footer-logo"><a href="index.html"><img src="/images/footer-logo.png" alt=""></a></figure>
+                                <figure class="footer-logo"><a href="index.html"><img src="/images/logo.png" alt=""></a></figure>
                                 <div class="text">
-                                    <p>Lorem ipsum dolor amet consecto adi pisicing elit sed eiusm tempor incididunt labore dolore magna aliqua enim ad minim.</p>
-                                </div>
+                                Та бүтээгдэхүүн цэснээс хайсан барааныхаа дэлгэрэнгүй мэдээллийг үзэх боломжтой ба асуулт хариултыг сэтгэгдэл хэсэгт үлдээнэ үү.</p> </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget ml_100">
                                 <div class="widget-title">
-                                    <h3>Links</h3>
+                                    <h3>Холбоосууд</h3>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="links-list clearfix">
-                                        <li><a href="index.html">About</a></li>
-                                        <li><a href="index.html">Services</a></li>
-                                        <li><a href="index.html">Job</a></li>
-                                        <li><a href="index.html">opportunities</a></li>
-                                        <li><a href="index.html">Location</a></li>
-                                        <li><a href="index.html">Article</a></li>
+                                        <li><a href="">Бидний тухай</a></li>
+                                        <li><a href="">Үйлчилгээнүүд</a></li>
+                                        <li><a href="">Ажлын зар</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -289,30 +285,30 @@
                         <div class="col-lg-2 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget links-widget">
                                 <div class="widget-title">
-                                    <h3>Services</h3>
+                                    <!-- <h3>Services</h3> -->
                                 </div>
                                 <div class="widget-content">
-                                    <ul class="links-list clearfix">
+                                    <!-- <ul class="links-list clearfix">
                                         <li><a href="index.html">About</a></li>
                                         <li><a href="index.html">Services</a></li>
                                         <li><a href="index.html">Job</a></li>
                                         <li><a href="index.html">opportunities</a></li>
                                         <li><a href="index.html">Location</a></li>
                                         <li><a href="index.html">Article</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
                             <div class="footer-widget contact-widget">
                                 <div class="widget-title">
-                                    <h3>Contacts</h3>
+                                    <h3>Холбоо барих</h3>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="info-list clearfix">
-                                        <li>Flat 20, Reynolds Neck, North Helenaville, FV77 8WS</li>
-                                        <li><a href="tel:23055873407">+2(305) 587-3407</a></li>
-                                        <li><a href="mailto:sample@example.com">sample@example.com</a></li>
+                                        <li>Улаанбаатар хот, Баянгол дүүрэг, 16-р хороо, Амарсанаагийн гудамж, Гандан, 12В байр 14 тоот</li>
+                                        <li><a href="tel:23055873407">+976 9911-4532</a></li>
+                                        <li><a href="mailto:sample@example.com">info@topes.mn</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -323,11 +319,8 @@
             <div class="footer-bottom p_relative">
                 <div class="auto-container">
                     <div class="bottom-inner p_relative">
-                        <div class="copyright"><p><a href="index.html">Easton</a> &copy; 2022 All Right Reserved</p></div>
-                        <ul class="footer-nav">
-                            <li><a href="index.html">Terms of Service</a></li>
-                            <li><a href="index.html">Privacy Policy</a></li>
-                        </ul>
+                        <div class="copyright"><p><a href="index.html">Topes</a> &copy; 2025 Бүх эрх хуулиар хамгаалагдсан</p></div>
+   
                     </div>
                 </div>
             </div>
@@ -343,7 +336,7 @@
                     <div class="scroll-bar">
                         <div class="bar-inner"></div>
                     </div>
-                    <div class="scroll-bar-text">Go To Top</div>
+                    <div class="scroll-bar-text">Дээш очих</div>
                 </div>
             </div>
         </div>

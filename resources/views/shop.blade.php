@@ -7,10 +7,10 @@
             <div class="bg-layer parallax-bg" data-parallax='{"y": 100}' style="background-image: url(/images/background/page-title.jpg);"></div>
             <div class="auto-container">
                 <div class="content-box">
-                    <h2>Our Shop</h2>
+                    <h2>Дэлгүүр</h2>
                     <ul class="bread-crumb clearfix">
-                        <li><a href="/">Home</a></li>
-                        <li>Our Shop</li>
+                        <li><a href="/">Нүүр</a></li>
+                        <li>Бүтээгдэхүүн</li>
                     </ul>
                 </div>
             </div>
@@ -43,7 +43,7 @@
 
                             <div class="category-widget sidebar-widget">
                                 <div class="widget-title">
-                                    <h4>Categories</h4>
+                                    <h4>Ангилал</h4>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="category-list clearfix">
@@ -99,7 +99,9 @@
                                     <div class="btn-box float_left p_relative clearfix mr_30">
                                         <button class="grid-view on p_relative d_iblock fs_20 b_radius_5 mr_2 centred"><i class="icon-76"></i></button>
                                     </div>
-                                    <div class="text float_left"><p class="fs_16 font_family_poppins">Showing <span class="color_black">{{ $products->firstItem() }}–{{ $products->lastItem() }}</span> of <span class="color_black">{{ $products->total() }}</span> Results</p></div>
+                                    <div class="text float_left"><p class="fs_16 font_family_poppins">Нийт <span class="color_black"> {{ $products->total() }}</span>-с <span class="color_black"> {{ $products->lastItem() }} </span>
+                                        <!-- {{ $products->total() }}</span> Results</p> -->
+                                    </div>
                                 </div>
 
                                 <!--
