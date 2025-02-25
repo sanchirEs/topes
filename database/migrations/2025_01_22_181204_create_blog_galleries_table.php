@@ -13,9 +13,15 @@ return new class extends Migration
     {
         Schema::create('blog_galleries', function (Blueprint $table) {
             $table->id();
-            $table->int('blog_post_id');
+            $table->unsignedBigInteger('blog_post_id'); // ✅ FIXED
             $table->string('picture');
             $table->timestamps();
+
+            // ✅ Add foreign key constraint (assuming `blog_post_id` references `blog_posts` table)
+            $table->foreign('blog_post_id')
+                  ->references('id')
+                  ->on('blog_posts')
+                  ->onDelete('cascade');
         });
     }
 
