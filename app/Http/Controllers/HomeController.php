@@ -22,6 +22,8 @@ class HomeController extends Controller
 
         $data['partners'] = Partner::orderBy('id','ASC')->get();
 
+        $data['categories'] = Product_category::orderBy('sort_order','ASC')->get();
+
         return view('home',$data);
     }
     public function shop() 
