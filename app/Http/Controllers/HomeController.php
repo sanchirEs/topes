@@ -57,6 +57,8 @@ class HomeController extends Controller
     {
         $data['product'] = Product::where('id',$id)->with(['Product_category'])->first();
 
+        $data['others'] = Product::where('id','!=',$id)->with(['Product_category'])->inRandomOrder()->limit(4)->get();
+
         return view('product',$data);
     }
 
