@@ -62,4 +62,10 @@ class HomeController extends Controller
         return view('product',$data);
     }
 
+    public function contact() 
+    {
+
+        return view('contact',);
+    }
+
 }

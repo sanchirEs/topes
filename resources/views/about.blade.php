@@ -12,7 +12,7 @@
                     <h2>About Us</h2>
                     <ul class="bread-crumb clearfix">
                         <li><a href="index.html">Home</a></li>
-                        <li>About Us#</li>
+                        <li>About Us</li>
                     </ul>
                 </div>
             </div>

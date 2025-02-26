@@ -55,7 +55,7 @@
                                     <div class="shape-1"></div>
                                     <div class="shape-2"></div>
                                     <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5"><i class="icon-12"></i></div>
-                                    <h3 class="p_relative d_block"><a href="index-2.html">{!! $service->title !!}</a></h3>
+                                    <h3 class="p_relative d_block"><a href="#">{!! $service->title !!}</a></h3>
                                     <p>{{$service->description}}</p>
                                 </div>
                             </div>
@@ -493,7 +493,7 @@
             <div class="auto-container">
                 <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
                     @foreach($partners as $partner)
-                    <figure class="clients-logo p_relative d_block"><a href="index.html"><img src="{{ '/storage/'.$partner->picture }}" alt=""></a></figure>
+                    <figure class="clients-logo p_relative d_block"><a href="index.html"><img src="{{ '/storage/'.$partner->logo }}" alt=""></a></figure>
                     @endforeach
                 </div>
             </div>

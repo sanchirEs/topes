@@ -160,10 +160,10 @@
                                         <nav class="main-menu navbar-expand-md navbar-light">
                                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                                 <ul class="navigation scroll-nav clearfix">
-                                                    <li class="dropdown"><a href="/">Нүүр</a>
-                                                    </li>
-                                                    <li><a href="#about">Тухай</a></li>
-                                                    <li><a href="#service">Үйлчилгээ</a></li>
+                                                    <li><a href="/">Нүүр</a>  </li>
+                                                  
+                                                    <li><a href="/#about">Тухай</a></li>
+                                                    <li><a href="/#service">Үйлчилгээ</a></li>
                                                     <li class="dropdown"><a href="/shop">Бүтээгдэхүүн</a>
                                                         <ul>
                                                             @foreach($categories as $category)
@@ -184,7 +184,7 @@
                                         </div>
                                         -->
                                         <div class="btn-box">
-                                            <a href="index.html" class="theme-btn btn-one">Холбоо барих</a>
+                                            <a href="/contact" class="theme-btn btn-one">Холбоо барих</a>
                                         </div>
                                     </div>
                                 </div>
