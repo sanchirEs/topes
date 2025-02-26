@@ -214,7 +214,7 @@
                             </div>
                             -->
                             <div class="btn-box">
-                                <a href="index.html" class="theme-btn btn-one">Холбоо барих</a>
+                                <a href="/contact" class="theme-btn btn-one">Холбоо барих</a>
                             </div>
                         </div>
                     </div>
