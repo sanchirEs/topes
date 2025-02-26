@@ -26,6 +26,13 @@ class HomeController extends Controller
 
         return view('home',$data);
     }
+
+    public function about() 
+    {
+
+        return view('about',);
+    }
+
     public function shop() 
     {
         $data['products'] = Product::orderBy('sort_order','ASC')->with(['Product_category'])->paginate(9);
