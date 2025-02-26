@@ -41,7 +41,7 @@ class ProductResource extends Resource
                     ->label('Picture 270*250'),
                 Forms\Components\TextInput::make('price')
                     ->numeric()
-                    ->default(0.00)
+                    ->default(0)
                     ->prefix('$'),
                 Forms\Components\Toggle::make('status')
                     ->required(),

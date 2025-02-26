@@ -705,7 +705,6 @@ img {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   float: right;
 }
 
@@ -1141,6 +1140,10 @@ img {
 
 .main-menu .navigation li.dropdown ul li.dropdown .dropdown-btn{
   display: none;
+}
+
+.menu-area {
+  float: right;
 }
 
 .menu-area .mobile-nav-toggler {
@@ -3863,7 +3866,7 @@ div#mCSB_1_container{
 }
 
 .main-footer .footer-top{
-  padding: 150px 0px 67px 0px;
+  padding: 67px 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
@@ -3913,7 +3916,7 @@ div#mCSB_1_container{
 /** footer-bottom **/
 
 .footer-bottom{
-  padding: 32px 0px;
+  padding: 16px 0px;
 }
 
 .footer-bottom .bottom-inner{

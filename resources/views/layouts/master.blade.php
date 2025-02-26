@@ -10,7 +10,7 @@
 <title>Topes</title>
 
 <!-- Fav Icon -->
-<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/images/favicon.png" type="image/x-icon">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -198,10 +198,10 @@
             <!--sticky Header-->
             <div class="sticky-header">
                 <div class="auto-container">
+                    <div class="logo-box">
+                        <figure class="logo"><a href="/"><img src="/images/logo.png" alt=""></a></figure>
+                    </div>
                     <div class="outer-box">
-                        <div class="logo-box">
-                            <figure class="logo"><a href="/"><img src="/images/logo.png" alt=""></a></figure>
-                        </div>
                         <div class="menu-area clearfix">
                             <nav class="main-menu clearfix">
                                 <!--Keep This Empty / Menu will come through Javascript-->

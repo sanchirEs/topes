@@ -146,7 +146,7 @@
                         <h2 class="d_block fs_30 lh_40 fw_sbold">Бусад бүтээгдэхүүнүүд</h2>
                     </div>
                     <div class="row clearfix">
-                        @foreach($other as $other)
+                        @foreach($others as $other)
                         <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
                             <div class="shop-block-one">
                                 <div class="inner-box">
@@ -169,7 +169,7 @@
                                             <li><i class="icon-71"></i></li>
                                             <li><i class="icon-71"></i></li>
                                         </ul>
-                                        <span class="price">{{other->price}}₮</span>
+                                        <span class="price">{{$other->price}}₮</span>
                                     </div>
                                 </div>
                             </div>

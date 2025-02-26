@@ -6,7 +6,7 @@
 
 <!-- Page Title -->
 <section class="page-title centred">
-            <div class="bg-layer parallax-bg" data-parallax='{"y": 100}' style="background-image: url(assets/images/background/page-title.jpg);"></div>
+            <div class="bg-layer parallax-bg" data-parallax='{"y": 100}' style="background-image: url(/images/background/page-title.jpg);"></div>
             <div class="auto-container">
                 <div class="content-box">
                     <h2>About Us</h2>
@@ -22,19 +22,19 @@
 
         <!-- about-section -->
         <section class="about-section sec-pad">
-            <div class="pattern-layer-2" style="background-image: url(assets/images/shape/shape-24.png);"></div>
+            <div class="pattern-layer-2" style="background-image: url(/images/shape/shape-24.png);"></div>
             <div class="auto-container">
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                         <div class="image_block_eight">
                             <div data-animation-box class="image-box p_relative d_block">
                                 <div class="shape">
-                                    <div class="shape-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
-                                    <div class="shape-2" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="shape-1" style="background-image: url(/images/shape/shape-45.png);"></div>
+                                    <div class="shape-2" style="background-image: url(/images/shape/shape-45.png);"></div>
                                 </div>
-                                <div class="icon-box float-bob-y"><img src="assets/images/icons/icon-1.png" alt=""></div>
-                                <figure data-animation-text class="overlay-anim-black-bg image image-1" data-animation="overlay-animation"><img src="assets/images/resource/about-5.jpg" alt=""></figure>
-                                <figure class="image image-2"><img src="assets/images/resource/about-6.jpg" alt=""></figure>
+                                <div class="icon-box float-bob-y"><img src="/images/icons/icon-1.png" alt=""></div>
+                                <figure data-animation-text class="overlay-anim-black-bg image image-1" data-animation="overlay-animation"><img src="/images/resource/about-5.jpg" alt=""></figure>
+                                <figure class="image image-2"><img src="/images/resource/about-6.jpg" alt=""></figure>
                             </div>
                         </div>
                     </div>
@@ -69,7 +69,7 @@
                                     <li>Wiring and installation/upgrades</li>
                                     <li>Full-service electrical layout, design</li>
                                 </ul>
-                                <figure class="signature"><img src="assets/images/icons/signature-1.png" alt=""></figure>
+                                <figure class="signature"><img src="/images/icons/signature-1.png" alt=""></figure>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
 
         <!-- service-style-three -->
         <section class="service-style-three p_relative sec-pad bg-color-3 centred">
-            <div class="pattern-layer" style="background-image: url(assets/images/shape/shape-32.png);"></div>
+            <div class="pattern-layer" style="background-image: url(/images/shape/shape-32.png);"></div>
             <div class="auto-container">
                 <div class="sec-title p_relative mb_50">
                     <h5 class="d_block fs_17 lh_25 fw_medium mb_9">Our Services</h5>
@@ -90,10 +90,10 @@
                 <div class="three-item-carousel owl-carousel owl-theme owl-nav-none">
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="air-conditioning.html"><img src="assets/images/service/service-9.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="air-conditioning.html"><img src="/images/service/service-9.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-15"></i></div>
                                 </div>
                                 <h3><a href="air-conditioning.html">Air Conditioning</a></h3>
@@ -104,10 +104,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="heating-service.html"><img src="assets/images/service/service-10.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="heating-service.html"><img src="/images/service/service-10.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-16"></i></div>
                                 </div>
                                 <h3><a href="heating-service.html">Heating Service</a></h3>
@@ -118,10 +118,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="electrical-panels.html"><img src="assets/images/service/service-11.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="electrical-panels.html"><img src="/images/service/service-11.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-17"></i></div>
                                 </div>
                                 <h3><a href="electrical-panels.html">Eectrical Service</a></h3>
@@ -132,10 +132,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="air-conditioning.html"><img src="assets/images/service/service-9.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="air-conditioning.html"><img src="/images/service/service-9.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-15"></i></div>
                                 </div>
                                 <h3><a href="air-conditioning.html">Air Conditioning</a></h3>
@@ -146,10 +146,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="heating-service.html"><img src="assets/images/service/service-10.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="heating-service.html"><img src="/images/service/service-10.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-16"></i></div>
                                 </div>
                                 <h3><a href="heating-service.html">Heating Service</a></h3>
@@ -160,10 +160,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="electrical-panels.html"><img src="assets/images/service/service-11.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="electrical-panels.html"><img src="/images/service/service-11.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-17"></i></div>
                                 </div>
                                 <h3><a href="electrical-panels.html">Eectrical Service</a></h3>
@@ -174,10 +174,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="air-conditioning.html"><img src="assets/images/service/service-9.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="air-conditioning.html"><img src="/images/service/service-9.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-15"></i></div>
                                 </div>
                                 <h3><a href="air-conditioning.html">Air Conditioning</a></h3>
@@ -188,10 +188,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="heating-service.html"><img src="assets/images/service/service-10.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="heating-service.html"><img src="/images/service/service-10.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-16"></i></div>
                                 </div>
                                 <h3><a href="heating-service.html">Heating Service</a></h3>
@@ -202,10 +202,10 @@
                     </div>
                     <div class="service-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><a href="electrical-panels.html"><img src="assets/images/service/service-11.jpg" alt=""></a></figure>
+                            <figure class="image-box"><a href="electrical-panels.html"><img src="/images/service/service-11.jpg" alt=""></a></figure>
                             <div class="lower-content">
                                 <div class="icon-box">
-                                    <div class="icon-shape" style="background-image: url(assets/images/shape/shape-31.png);"></div>
+                                    <div class="icon-shape" style="background-image: url(/images/shape/shape-31.png);"></div>
                                     <div class="icon"><i class="icon-17"></i></div>
                                 </div>
                                 <h3><a href="electrical-panels.html">Eectrical Service</a></h3>
@@ -231,11 +231,11 @@
                 <div class="two-item-carousel owl-carousel owl-theme owl-nav-none">
                     <div class="testimonial-block-one">
                         <div class="inner-box p_relative d_block">
-                            <div class="light-icon"><img src="assets/images/icons/icon-3.png" alt=""></div>
+                            <div class="light-icon"><img src="/images/icons/icon-3.png" alt=""></div>
                             <div class="icon-box p_relative d_block fs_65"><i class="icon-31"></i></div>
                             <p>Adipisicing elit sed do eiusmod tempor incid labore et dolore magna aliqua enim minim quis veniam nostrud exercition ulamco laboris nis aliquip commodo.</p>
                             <div class="author-box p_relative d_block">
-                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="/images/resource/testimonial-1.jpg" alt=""></figure>
                                 <h5>Rachel McAdams</h5>
                                 <span class="designation p_relative d_block">Electrician</span>
                             </div>
@@ -243,11 +243,11 @@
                     </div>
                     <div class="testimonial-block-one">
                         <div class="inner-box p_relative d_block">
-                            <div class="light-icon"><img src="assets/images/icons/icon-3.png" alt=""></div>
+                            <div class="light-icon"><img src="/images/icons/icon-3.png" alt=""></div>
                             <div class="icon-box p_relative d_block fs_65"><i class="icon-31"></i></div>
                             <p>Adipisicing elit sed do eiusmod tempor incid labore et dolore magna aliqua enim minim quis veniam nostrud exercition ulamco laboris nis aliquip commodo.</p>
                             <div class="author-box p_relative d_block">
-                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="assets/images/resource/testimonial-2.jpg" alt=""></figure>
+                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="/images/resource/testimonial-2.jpg" alt=""></figure>
                                 <h5>Jhon Haris</h5>
                                 <span class="designation p_relative d_block">Electrician</span>
                             </div>
@@ -255,11 +255,11 @@
                     </div>
                     <div class="testimonial-block-one">
                         <div class="inner-box p_relative d_block">
-                            <div class="light-icon"><img src="assets/images/icons/icon-3.png" alt=""></div>
+                            <div class="light-icon"><img src="/images/icons/icon-3.png" alt=""></div>
                             <div class="icon-box p_relative d_block fs_65"><i class="icon-31"></i></div>
                             <p>Adipisicing elit sed do eiusmod tempor incid labore et dolore magna aliqua enim minim quis veniam nostrud exercition ulamco laboris nis aliquip commodo.</p>
                             <div class="author-box p_relative d_block">
-                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="/images/resource/testimonial-1.jpg" alt=""></figure>
                                 <h5>Rachel McAdams</h5>
                                 <span class="designation p_relative d_block">Electrician</span>
                             </div>
@@ -267,11 +267,11 @@
                     </div>
                     <div class="testimonial-block-one">
                         <div class="inner-box p_relative d_block">
-                            <div class="light-icon"><img src="assets/images/icons/icon-3.png" alt=""></div>
+                            <div class="light-icon"><img src="/images/icons/icon-3.png" alt=""></div>
                             <div class="icon-box p_relative d_block fs_65"><i class="icon-31"></i></div>
                             <p>Adipisicing elit sed do eiusmod tempor incid labore et dolore magna aliqua enim minim quis veniam nostrud exercition ulamco laboris nis aliquip commodo.</p>
                             <div class="author-box p_relative d_block">
-                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="assets/images/resource/testimonial-2.jpg" alt=""></figure>
+                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="/images/resource/testimonial-2.jpg" alt=""></figure>
                                 <h5>Jhon Haris</h5>
                                 <span class="designation p_relative d_block">Electrician</span>
                             </div>
@@ -279,11 +279,11 @@
                     </div>
                     <div class="testimonial-block-one">
                         <div class="inner-box p_relative d_block">
-                            <div class="light-icon"><img src="assets/images/icons/icon-3.png" alt=""></div>
+                            <div class="light-icon"><img src="/images/icons/icon-3.png" alt=""></div>
                             <div class="icon-box p_relative d_block fs_65"><i class="icon-31"></i></div>
                             <p>Adipisicing elit sed do eiusmod tempor incid labore et dolore magna aliqua enim minim quis veniam nostrud exercition ulamco laboris nis aliquip commodo.</p>
                             <div class="author-box p_relative d_block">
-                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="assets/images/resource/testimonial-1.jpg" alt=""></figure>
+                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="/images/resource/testimonial-1.jpg" alt=""></figure>
                                 <h5>Rachel McAdams</h5>
                                 <span class="designation p_relative d_block">Electrician</span>
                             </div>
@@ -291,11 +291,11 @@
                     </div>
                     <div class="testimonial-block-one">
                         <div class="inner-box p_relative d_block">
-                            <div class="light-icon"><img src="assets/images/icons/icon-3.png" alt=""></div>
+                            <div class="light-icon"><img src="/images/icons/icon-3.png" alt=""></div>
                             <div class="icon-box p_relative d_block fs_65"><i class="icon-31"></i></div>
                             <p>Adipisicing elit sed do eiusmod tempor incid labore et dolore magna aliqua enim minim quis veniam nostrud exercition ulamco laboris nis aliquip commodo.</p>
                             <div class="author-box p_relative d_block">
-                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="assets/images/resource/testimonial-2.jpg" alt=""></figure>
+                                <figure class="author-thumb p_absolute l_0 t_0 w_70 h_70 b_radius_50"><img src="/images/resource/testimonial-2.jpg" alt=""></figure>
                                 <h5>Jhon Haris</h5>
                                 <span class="designation p_relative d_block">Electrician</span>
                             </div>
@@ -339,8 +339,8 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box ml_120">
-                                        <div class="shape" style="background-image: url(assets/images/shape/shape-33.png);"></div>
-                                        <figure class="image"><img src="assets/images/resource/working-5.jpg" alt=""></figure>
+                                        <div class="shape" style="background-image: url(/images/shape/shape-33.png);"></div>
+                                        <figure class="image"><img src="/images/resource/working-5.jpg" alt=""></figure>
                                     </div>
                                 </div>
                             </div>
@@ -357,8 +357,8 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box ml_120">
-                                        <div class="shape" style="background-image: url(assets/images/shape/shape-33.png);"></div>
-                                        <figure class="image"><img src="assets/images/resource/working-4.jpg" alt=""></figure>
+                                        <div class="shape" style="background-image: url(/images/shape/shape-33.png);"></div>
+                                        <figure class="image"><img src="/images/resource/working-4.jpg" alt=""></figure>
                                     </div>
                                 </div>
                             </div>
@@ -375,8 +375,8 @@
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                                     <div class="image-box ml_120">
-                                        <div class="shape" style="background-image: url(assets/images/shape/shape-33.png);"></div>
-                                        <figure class="image"><img src="assets/images/resource/working-6.jpg" alt=""></figure>
+                                        <div class="shape" style="background-image: url(/images/shape/shape-33.png);"></div>
+                                        <figure class="image"><img src="/images/resource/working-6.jpg" alt=""></figure>
                                     </div>
                                 </div>
                             </div>
@@ -394,8 +394,8 @@
                 <div class="project-carousel-2 owl-carousel owl-theme owl-dots-none nav-style-one">
                     <div class="project-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/project/project-5.jpg" alt=""></figure>
-                            <div class="view-btn"><a href="assets/images/project/project-5.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
+                            <figure class="image-box"><img src="/images/project/project-5.jpg" alt=""></figure>
+                            <div class="view-btn"><a href="/images/project/project-5.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
                             <div class="text">
                                 <h4><a href="project-details.html">House Wiring Repair</a></h4>
                                 <span>Installation</span>
@@ -404,8 +404,8 @@
                     </div>
                     <div class="project-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/project/project-6.jpg" alt=""></figure>
-                            <div class="view-btn"><a href="assets/images/project/project-6.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
+                            <figure class="image-box"><img src="/images/project/project-6.jpg" alt=""></figure>
+                            <div class="view-btn"><a href="/images/project/project-6.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
                             <div class="text">
                                 <h4><a href="project-details.html">House Wiring Repair</a></h4>
                                 <span>Installation</span>
@@ -414,8 +414,8 @@
                     </div>
                     <div class="project-block-two">
                         <div class="inner-box">
-                            <figure class="image-box"><img src="assets/images/project/project-7.jpg" alt=""></figure>
-                            <div class="view-btn"><a href="assets/images/project/project-7.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
+                            <figure class="image-box"><img src="/images/project/project-7.jpg" alt=""></figure>
+                            <div class="view-btn"><a href="/images/project/project-7.jpg" class="lightbox-image" data-fancybox="gallery"><i class="icon-28"></i></a></div>
                             <div class="text">
                                 <h4><a href="project-details.html">House Wiring Repair</a></h4>
                                 <span>Installation</span>
@@ -439,7 +439,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-4.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-4.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -455,7 +455,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-5.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-5.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -471,7 +471,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-6.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-6.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -487,7 +487,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-4.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-4.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -503,7 +503,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-5.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-5.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -519,7 +519,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-6.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-6.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -535,7 +535,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-4.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-4.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -551,7 +551,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-5.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-5.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>
@@ -567,7 +567,7 @@
                     <div class="team-block-two">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><img src="assets/images/team/team-6.jpg" alt=""></figure>
+                                <figure class="image"><img src="/images/team/team-6.jpg" alt=""></figure>
                                 <ul class="social-links clearfix">
                                     <li><a href="index-3.html"><i class="fab fa-facebook-f"></i></a></li>
                                     <li><a href="index-3.html"><i class="fab fa-twitter"></i></a></li>

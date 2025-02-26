@@ -147,13 +147,7 @@
                                                     </div>
                                                     <div class="lower-content">
                                                         <h6><a href="{{ url( $product->Product_category->link .'/product/'. $product->id ) }}">{{$product->name}}</a></h6>
-                                                        <ul class="rating clearfix">
-                                                            <li><i class="icon-71"></i></li>
-                                                            <li><i class="icon-71"></i></li>
-                                                            <li><i class="icon-71"></i></li>
-                                                            <li><i class="icon-71"></i></li>
-                                                            <li><i class="icon-71"></i></li>
-                                                        </ul>
+                                                        {!! \Illuminate\Support\Str::words($product->product, 10) !!}
                                                         <span class="price">{{$product->price}}₮</span>
                                                     </div>
                                                 </div>
