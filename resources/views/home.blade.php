@@ -81,7 +81,7 @@
                             <div class="content-box">
                                 <div class="text p_relative d_block mb_25">
                                     <p class="fw_medium bold-text mb_25">Бид бүх төрлийн цахилгаан угсралт, суурилуулалт, уггал шалгалтыг найдвартай гүйцэтгэдэг.</p>
-                                    <p class="fw_medium bold-text mb_25">Таны цаг зав үнэ цэнэтэй учраас бид цагийн хуваарьтаа үргэлж нийцүүлэн, ажлыг эхний оролдлогоор чанартай гүйцэтгэхийг зорьдог.</p>
+                                    <p class="fw_medium bold-text mb_25">Таны аюулгүй байдал бидний тэргүүлэх зорилт тул туршлагатай инженер, цахилгаанчид манай танд найдвартай үйлчилгээг санал болгож байна.</p>
                                     <!-- <p class="fw_medium bold-text mb_25">Бид бүх төрлийн цахилгаан угсралт, суурилуулалт, уггал шалгалтыг найдвартай гүйцэтгэдэг.  </p> -->
                                     </div>
                                 <div class="inner-box">
@@ -94,7 +94,7 @@
                                                     <li>Олон улсын стандартад нийцсэн угсралт, суурилуулалт</li>
                                                     <li>Цахилгааны иж бүрэн зураг төсөл, төлөвлөлт</li>
                                                 </ul>
-                                                <!-- <div class="btn-box"><a href="index-2.html" class="theme-btn btn-one">Discover more</a></div> -->
+                                                <div class="btn-box"><a href="about.html" class="theme-btn btn-one">Дэлгэрэнгүй</a></div>
                                             </div>
                                         </div>
                                         <div class="col-lg-6 col-md-6 col-sm-12 right-column">

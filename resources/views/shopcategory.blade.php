@@ -99,7 +99,9 @@
                                     <div class="btn-box float_left p_relative clearfix mr_30">
                                         <button class="grid-view on p_relative d_iblock fs_20 b_radius_5 mr_2 centred"><i class="icon-76"></i></button>
                                     </div>
-                                    <div class="text float_left"><p class="fs_16 font_family_poppins">Showing <span class="color_black">{{ $products->firstItem() }}–{{ $products->lastItem() }}</span> of <span class="color_black">{{ $products->total() }}</span> Results</p></div>
+                                    <div class="text float_left"><p class="fs_16 font_family_poppins">Нийт <span class="color_black"> {{ $products->total() }}</span>-с <span class="color_black"> {{ $products->lastItem() }} </span>
+                                        <!-- {{ $products->total() }}</span> Results</p> -->
+                                    </div>
                                 </div>
 
                                 <!--
