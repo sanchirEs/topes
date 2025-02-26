@@ -14,7 +14,7 @@
                         <div class="content-box p_relative d_block z_5">
                             <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_9">Монголын <span>шилдэг </span> цахилгааны үйлчилгээ</h2>
                             <p class="p_relative d_block fs_18">Бид барилгын цахилгаан, холбоо дохиолол, автоматжуулалт, угсралтын дараах засвар үйлчилгээний цогц шийдлийг санал болгож байна. Бидний мэргэшсэн баг таны төсөлд хамгийн өндөр түвшний мэргэжлийн үйлчилгээг үзүүлнэ.</p>
-                            <div class="btn-box"><a href="about.html" class="theme-btn btn-one">Компанийн тухай</a></div>
+                            <div class="btn-box"><a href="/about" class="theme-btn btn-one">Компанийн тухай</a></div>
                         </div> 
                     </div>
                 </div>
