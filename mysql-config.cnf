@@ -3,3 +3,4 @@ performance_schema = 0
 innodb_buffer_pool_size = 64M
 innodb_log_file_size = 32M
 max_connections = 20
+
