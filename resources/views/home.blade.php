@@ -14,7 +14,7 @@
                         <div class="content-box p_relative d_block z_5">
                             <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_9">Монголын <span>шилдэг </span> цахилгааны үйлчилгээ</h2>
                             <p class="p_relative d_block fs_18">Бид барилгын цахилгаан, холбоо дохиолол, автоматжуулалт, угсралтын дараах засвар үйлчилгээний цогц шийдлийг санал болгож байна. Бидний мэргэшсэн баг таны төсөлд хамгийн өндөр түвшний мэргэжлийн үйлчилгээг үзүүлнэ.</p>
-                            <div class="btn-box"><a href="about.html" class="theme-btn btn-one">Компанийн тухай</a></div>
+                            <div class="btn-box"><a href="/about" class="theme-btn btn-one">Компанийн тухай</a></div>
                         </div> 
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                                     <div class="shape-1"></div>
                                     <div class="shape-2"></div>
                                     <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5"><i class="icon-12"></i></div>
-                                    <h3 class="p_relative d_block"><a href="index-2.html">{!! $service->title !!}</a></h3>
+                                    <h3 class="p_relative d_block"><a href="#">{!! $service->title !!}</a></h3>
                                     <p>{{$service->description}}</p>
                                 </div>
                             </div>
@@ -493,7 +493,7 @@
             <div class="auto-container">
                 <div class="five-item-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
                     @foreach($partners as $partner)
-                    <figure class="clients-logo p_relative d_block"><a href="index.html"><img src="{{ '/storage/'.$partner->picture }}" alt=""></a></figure>
+                    <figure class="clients-logo p_relative d_block"><a href="index.html"><img src="{{ '/storage/'.$partner->logo }}" alt=""></a></figure>
                     @endforeach
                 </div>
             </div>

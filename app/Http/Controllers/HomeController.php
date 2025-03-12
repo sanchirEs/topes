@@ -26,6 +26,13 @@ class HomeController extends Controller
 
         return view('home',$data);
     }
+
+    public function about() 
+    {
+
+        return view('about',);
+    }
+
     public function shop() 
     {
         $data['products'] = Product::orderBy('sort_order','ASC')->with(['Product_category'])->paginate(9);
@@ -50,7 +57,15 @@ class HomeController extends Controller
     {
         $data['product'] = Product::where('id',$id)->with(['Product_category'])->first();
 
+        $data['others'] = Product::where('id','!=',$id)->with(['Product_category'])->inRandomOrder()->limit(4)->get();
+
         return view('product',$data);
+    }
+
+    public function contact() 
+    {
+
+        return view('contact',);
     }
 
 }
