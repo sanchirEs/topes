@@ -42,30 +42,63 @@
         </section>
         <!-- banner-section end -->
 
-
         <!-- feature-style-two -->
         <section class="feature-style-two centred p_relative" id='service'>
             <div class="auto-container">
                 <div class="inner-container">
                     <div class="row clearfix">
-                        @foreach($services as $service)
+
+                        <!-- Service 1 -->
                         <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
                             <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
                                 <div class="inner-box">
                                     <div class="shape-1"></div>
                                     <div class="shape-2"></div>
-                                    <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5"><i class="icon-12"></i></div>
-                                    <h3 class="p_relative d_block"><a href="#">{!! $service->title !!}</a></h3>
-                                    <p>{{$service->description}}</p>
+                                    <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5">
+                                        <i class="icon-12"></i>
+                                    </div>
+                                    <h3 class="p_relative d_block"><a href="#">Цахилгааны цогц үйлчилгээ</a></h3>
+                                    <p>Барилгын цахилгаан, холбоо дохиолол, автоматжуулалт</p>
                                 </div>
                             </div>
                         </div>
-                        @endforeach
+
+                        <!-- Service 2 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <div class="shape-1"></div>
+                                    <div class="shape-2"></div>
+                                    <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5">
+                                        <i class="icon-12"></i>
+                                    </div>
+                                    <h3 class="p_relative d_block"><a href="#">Төхөөрөмжийн худалдаа</a></h3>
+                                    <p>Дохиолол, домофоны тоног төхөөрөмжийн худалдаа</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <div class="shape-1"></div>
+                                    <div class="shape-2"></div>
+                                    <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5">
+                                        <i class="icon-12"></i>
+                                    </div>
+                                    <h3 class="p_relative d_block"><a href="#">Гэмтэл шалгах, засвар, үйлчилгээ</a></h3>
+                                    <p>Үрсэлтийн дараах гэмтэл шалгах, засвар үйлчилгээ</p>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- feature-style-two end -->
+
 
 
         <!-- about-style-two -->
