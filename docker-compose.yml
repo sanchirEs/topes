@@ -18,19 +18,17 @@ services:
       - DB_PORT=3306
       - DB_DATABASE=topes
       - DB_USERNAME=laraveluser
-      - DB_PASSWORD=secret
+      - DB_PASSWORD=jD5v4YpXgTqsda
 
   mysql:
     image: mariadb:10.5
     container_name: laravel_mysql
     restart: unless-stopped
-    ports:
-      - "3306:3306"
     environment:
       MYSQL_DATABASE: topes
       MYSQL_USER: laraveluser
-      MYSQL_PASSWORD: secret
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_PASSWORD: jD5v4YpXgTqsda
+      MYSQL_ROOT_PASSWORD: yourpassword
     volumes:
       - mysql_data:/var/lib/mysql
     networks:
