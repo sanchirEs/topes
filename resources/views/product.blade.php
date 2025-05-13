@@ -26,7 +26,9 @@
                         <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                             <div class="image-box p_relative d_block">
                                 <figure class="image"><img src="{{ '/storage/'.$product->picture }}" alt=""></figure>
-                                <div class="preview-link p_absolute t_20 r_20"><a href="{{ '/storage/'.$product->picture }}" class="lightbox-image p_relative d_iblock fs_20 centred z_1 w_50 h_50 color_black lh_50" data-fancybox="gallery"><i class="icon-63"></i></a></div>
+                                <div class="preview-link p_absolute t_20 r_20">
+                                    <a href="{{ '/storage/'.$product->picture }}" class="lightbox-image p_relative d_iblock fs_20 centred z_1 w_50 h_50 color_black lh_50" data-fancybox="gallery"><i class="icon-63"></i></a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 content-column">
@@ -41,7 +43,7 @@
                                         <li class="p_relative d_iblock pull-left mr_5 fs_13"><i class="icon-71"></i></li>
                                     </ul>
                                 </div>
-                                <span class="price p_relative d_block fs_20 lh_30 fw_medium mb_25">{{$product->price}}₮</span>
+                                <span class="price p_relative d_block fs_20 lh_30 fw_medium mb_25">{{ number_format($product->price) }}₮</span>
                                 <div class="text p_relative d_block mb_30">
                                     {!! $product->description !!}
                                 </div>
@@ -226,7 +228,9 @@
                                         </ul>
                                     </div>
                                     <div class="lower-content">
-                                        <h6><a href="{{ url( $other->Product_category->link .'/product/'. $other->id ) }}">{{$other->name}}</a></h6>
+                                        <h6>
+                                            <a href="{{ url( $other->Product_category->link .'/product/'. $other->id ) }}">{{$other->name}}</a>
+                                        </h6>
                                         <ul class="rating clearfix">
                                             <li><i class="icon-71"></i></li>
                                             <li><i class="icon-71"></i></li>
@@ -234,7 +238,7 @@
                                             <li><i class="icon-71"></i></li>
                                             <li><i class="icon-71"></i></li>
                                         </ul>
-                                        <span class="price">{{$other->price}}₮</span>
+                                        <span class="price">{{ number_format($other->price) }}₮</span>
                                     </div>
                                 </div>
                             </div>

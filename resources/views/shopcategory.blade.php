@@ -154,7 +154,7 @@
                                                             <li><i class="icon-71"></i></li>
                                                             <li><i class="icon-71"></i></li>
                                                         </ul>
-                                                        <span class="price">{{$product->price}}₮</span>
+                                                        <span class="price">{{ number_format($product->price) }}₮</span>
                                                     </div>
                                                 </div>
                                             </div>

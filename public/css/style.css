@@ -81,7 +81,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-  @media (min-width:1200px) {
+@media (min-width:1200px) {
   .container {
     max-width: 1200px;
     padding: 0px 15px;
@@ -405,7 +405,7 @@ img {
 .pagination li{
   position: relative;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .pagination li:last-child{
@@ -415,11 +415,11 @@ img {
 .pagination li a{
   position: relative;
   display: inline-block;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 500;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
+  /* height: 50px; */
+  /* width: 50px; */
+  /* line-height: 50px; */
   background: #ffffff;
   text-align: center;
   color: #141417;
@@ -1229,11 +1229,12 @@ img {
   display:block !important; 
 }
 
-.mobile-menu .nav-logo{
+.mobile-menu .nav-logo {
   position:relative;
-  padding:50px 25px;
+  /* padding: 50px 25px; */
+  padding: 25px;
   text-align:left;  
-  padding-bottom: 100px;
+  /* padding-bottom: 100px; */
 }
 
 .mobile-menu-visible{
@@ -8426,7 +8427,7 @@ div#mCSB_1_container{
   margin-bottom: 5px;
 }
 
-.shop-block-one .inner-box .lower-content .price{
+.shop-block-one .inner-box .lower-content .price {
   position: relative;
   display: block;
   font-size: 15px;

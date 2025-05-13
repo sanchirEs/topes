@@ -20,14 +20,14 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use App\Http\Middleware\TrustProxies;
 
 
-class TopesAdminPanelProvider extends PanelProvider
+class topesAdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
             ->default()
-            ->id('topesAdmin')
-            ->path('topesAdmin')
+            ->id('admin')
+            ->path('admin')
             ->login()
             ->colors([
                 'primary' => Color::Amber,

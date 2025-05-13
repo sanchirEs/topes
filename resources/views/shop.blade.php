@@ -148,7 +148,7 @@
                                                     <div class="lower-content">
                                                         <h6><a href="{{ url( $product->Product_category->link .'/product/'. $product->id ) }}">{{$product->name}}</a></h6>
                                                         {!! \Illuminate\Support\Str::words($product->product, 10) !!}
-                                                        <span class="price">{{$product->price}}₮</span>
+                                                        <span class="price">{{ number_format($product->price, 0) }}₮</span>
                                                     </div>
                                                 </div>
                                             </div>
