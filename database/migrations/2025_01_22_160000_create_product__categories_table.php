@@ -6,25 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
         Schema::create('product_categories', function (Blueprint $table) {
-            $table->id(); // Auto-incrementing ID
-            $table->string('name'); // Category name
-            $table->string('slug')->unique(); // Unique slug for SEO-friendly URLs
-            $table->string('link');
-            $table->integer('sort_order');
-            $table->text('description')->nullable(); // Optional description
-            $table->timestamps(); // created_at and updated_at
+            $table->id();                                // BIGINT UNSIGNED, AI, PK
+            $table->string('name', 100);                 // VARCHAR(100) NOT NULL
+            $table->string('slug', 100)->unique();       // UNIQUE
+            $table->text('description')->nullable();     // TEXT NULL
+            $table->tinyInteger('status')->default(1);   // TINYINT(1) DEFAULT 1
+            $table->timestamps();                        // created_at / updated_at
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('product_categories');
