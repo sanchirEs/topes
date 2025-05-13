@@ -6,27 +6,37 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    /**
+     * Run the migrations.
+     */
     public function up(): void
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();                                       // BIGINT UNSIGNED, AI
-            $table->foreignId('product_category_id')            // FK → categories.id
-                  ->constrained('product_categories')
-                  ->cascadeOnUpdate()
-                  ->cascadeOnDelete();
+            $table->id(); // Auto-incrementing ID
+            $table->unsignedBigInteger('product_category_id'); // Foreign key
+            $table->string('name'); // Product name
+            $table->string('slug')->unique(); // Unique slug for product pages
+            $table->text('description'); // Product description
+            $table->string('picture'); // Path to the product's main image
+            $table->decimal('price', 10, 2)->default(0.00); // Product price
+            $table->tinyInteger('status')->default(1); // 1=active, 0=inactive
+            $table->integer('sort_order'); // ✅ FIXED: Use integer() instead of int()
+            $table->timestamps(); // created_at and updated_at
 
-            $table->string('name');                             // VARCHAR(255)
-            $table->string('slug')->unique();                   // UNIQUE slug
-            $table->text('description')->nullable();            // TEXT NULL
-            $table->string('image')->nullable();                // VARCHAR(255) NULL
-            $table->decimal('price', 10, 2)->default(0.00);     // DECIMAL(10,2)
-            $table->tinyInteger('status')->default(1);          // TINYINT(1) DEFAULT 1
-            $table->timestamps();                               // created_at / updated_at
+            // Foreign key constraint
+            $table->foreign('product_category_id')
+                  ->references('id')
+                  ->on('product_categories')
+                  ->onDelete('cascade')
+                  ->onUpdate('cascade');
         });
     }
 
+    /**
+     * Reverse the migrations.
+     */
     public function down(): void
     {
         Schema::dropIfExists('products');
     }
-};
+};  
