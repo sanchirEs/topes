@@ -22,7 +22,7 @@ class HomeController extends Controller
 
         $data['partners'] = Partner::orderBy('id','ASC')->get();
 
-        // $data['categories'] = Product_category::orderBy('sort_order','ASC')->get();
+        $data['categories'] = Product_category::orderBy('sort_order','ASC')->get();
 
         return view('home',$data);
     }
@@ -37,7 +37,7 @@ class HomeController extends Controller
     {
         $data['products'] = Product::orderBy('sort_order','ASC')->with(['Product_category'])->paginate(9);
 
-        // $data['categories'] = Product_category::orderBy('sort_order','ASC')->get();
+        $data['categories'] = Product_category::orderBy('sort_order','ASC')->get();
 
         return view('shop',$data);
     }
