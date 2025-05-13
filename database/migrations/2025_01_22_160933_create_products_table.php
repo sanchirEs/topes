@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('picture'); // Path to the product's main image
             $table->decimal('price', 10, 2)->default(0.00); // Product price
             $table->tinyInteger('status')->default(1); // 1=active, 0=inactive
-            $table->integer('sort_order'); // ✅ FIXED: Use `integer()` instead of `int()`
+            $table->integer('sort_order'); // ✅ FIXED: Use integer() instead of int()
             $table->timestamps(); // created_at and updated_at
 
             // Foreign key constraint
@@ -39,4 +39,4 @@ return new class extends Migration
     {
         Schema::dropIfExists('products');
     }
-};
+};  
