@@ -8298,6 +8298,11 @@ div#mCSB_1_container{
   transition: all 500ms ease;
 }
 
+.shop-block-one:hover .product-name {
+  text-decoration: underline;
+  color: #eb7328;
+}
+
 .shop-block-one .inner-box:hover{
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.10);
 }
@@ -10589,7 +10594,7 @@ div#mCSB_1_container{
 
 .shop-page-section{
   position: relative;
-  padding: 120px 0px;
+  padding: 60px 0px;
 }
 
 .shop-sidebar{
@@ -10693,9 +10698,9 @@ div#mCSB_1_container{
   margin-bottom: 15px;
 }
 
-.shop-sidebar .category-widget{
-  padding-bottom: 25px;
-  margin-bottom: 23px;
+.shop-sidebar .category-widget {
+  padding-bottom: 20px;
+  /* margin-bottom: 20px; */
   border-bottom: 1px solid #e5e5e5;
 }
 

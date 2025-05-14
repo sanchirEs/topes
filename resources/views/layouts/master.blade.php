@@ -160,7 +160,7 @@
                                         <nav class="main-menu navbar-expand-md navbar-light">
                                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                                 <ul class="navigation scroll-nav clearfix">
-                                                    <li><a href="/">Нүүр</a>  </li>
+                                                    <li><a href="/#home">Нүүр</a>  </li>
                                                   
                                                     <li><a href="/#about">Тухай</a></li>
                                                     <li><a href="/#service">Үйлчилгээ</a></li>
@@ -172,21 +172,16 @@
                                                         </ul>
                                                     </li>
                                                     <!-- <li><a href="#gallery">Blog</a></li> -->
-                                                    <!-- <li><a href="#testimonial">Testimonial</a></li> -->
+                                                    <li><a href="#contact">Холбоо барих</a></li>
                                                 </ul>
                                             </div>
                                         </nav>
                                     </div>
-                                    <div class="nav-right">
-                                        <!--
-                                        <div class="search-box-outer search-toggler">
-                                            <i class="icon-5"></i>
-                                        </div>
-                                        -->
+                                    <!-- <div class="nav-right">
                                         <div class="btn-box">
                                             <a href="/contact" class="theme-btn btn-one">Холбоо барих</a>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -198,25 +193,20 @@
             <!--sticky Header-->
             <div class="sticky-header">
                 <div class="auto-container">
-                    <div class="logo-box">
+                    <div class="logo-box" style="padding: 0px">
                         <figure class="logo"><a href="/"><img src="/images/logo.png" alt=""></a></figure>
                     </div>
-                    <div class="outer-box">
+                    <div class="outer-box ">
                         <div class="menu-area clearfix">
                             <nav class="main-menu clearfix">
                                 <!--Keep This Empty / Menu will come through Javascript-->
                             </nav>
                         </div>
-                        <div class="nav-right">
-                            <!--
-                            <div class="search-box-outer search-toggler">
-                                <i class="icon-5"></i>
-                            </div>
-                            -->
+                        <!-- <div class="nav-right">
                             <div class="btn-box">
-                                <a href="/contact" class="theme-btn btn-one">Холбоо барих</a>
+                                <a href="#contact" class="theme-btn btn-one">Холбоо барих</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

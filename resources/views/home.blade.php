@@ -2,7 +2,7 @@
 
 @section('content')
         <!-- banner-section -->
-        <section class="banner-section banner-style-two p_relative">
+        <section class="banner-section banner-style-two p_relative" id="home">
             <div class="shape">
                 <div class="shape-5 p_absolute l_0 b_0 z_2"></div>
                 <div class="shape-4 p_absolute l_0 b_0 z_2"></div>
@@ -43,7 +43,7 @@
         <!-- banner-section end -->
 
         <!-- feature-style-two -->
-        <section class="feature-style-two centred p_relative" id='service'>
+        <section class="feature-style-two centred p_relative" id="service">
             <div class="auto-container">
                 <div class="inner-container">
                     <div class="row clearfix">
@@ -621,7 +621,7 @@
 
 
         <!-- cta-style-two -->
-        <section class="cta-style-two p_relative">
+        <section class="cta-style-two p_relative" id="contact">
             <div class="pattern-layer">
                 <div class="pattern-1" style="background-image: url(/images/shape/shape-19.png);"></div>
                 <div class="pattern-2" style="background-image: url(/images/shape/shape-20.png);"></div>

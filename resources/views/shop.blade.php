@@ -126,13 +126,16 @@
                                 <div class="shop-grid-content">
                                     <div class="row clearfix">
                                         @foreach($products as $product)
-                                        <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
+                                        <a href="{{ url( $product->Product_category->link .'/product/'. $product->id ) }}" 
+                                            class="col-lg-4 col-md-6 col-sm-12 shop-block">
                                             <div class="shop-block-one">
                                                 <div class="inner-box">
                                                     <div class="image-box">
-                                                        <span class="hot">Hot</span>
-                                                        <figure class="image"><img src="{{ '/storage/'.$product->picture }}" alt=""></figure>
-
+                                                        <!-- <span class="hot">Hot</span> -->
+                                                        <!-- <figure class="image"><img src="{{ '/storage/'.$product->picture }}" alt=""></figure> -->
+                                                        <figure class="image">
+                                                            <img src="{{ file_exists(public_path('/storage/'.$product->picture)) ? asset('storage/'.$product->picture) : asset('images/no-image.png') }}" alt="">
+                                                        </figure>
                                                         <!--
 
                                                         <ul class="option-list clearfix">
@@ -146,13 +149,15 @@
 
                                                     </div>
                                                     <div class="lower-content">
-                                                        <h6><a href="{{ url( $product->Product_category->link .'/product/'. $product->id ) }}">{{$product->name}}</a></h6>
+                                                        <h6 class="product-name">
+                                                            {{$product->name}}
+                                                        </h6>
                                                         {!! \Illuminate\Support\Str::words($product->product, 10) !!}
                                                         <span class="price">{{ number_format($product->price, 0) }}₮</span>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                         @endforeach
                                     </div>
                                 </div>

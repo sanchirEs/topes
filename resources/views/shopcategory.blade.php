@@ -24,72 +24,20 @@
                 <div class="row clearfix">
                     <div class="col-lg-3 col-md-12 col-sm-12 sidebar-side">
                         <div class="shop-sidebar">
-
-                            <!--
-
-                            <div class="search-widget sidebar-widget">
-                                <div class="widget-title">
-                                    <h4>Search</h4>
-                                </div>
-                                <form action="shop.html" method="post">
-                                    <div class="form-group">
-                                        <input type="search" name="search-field" placeholder="Search" required="">
-                                        <button type="submit"><i class="icon-63"></i></button>
-                                    </div>
-                                </form>
-                            </div>
-
-                            -->
-
                             <div class="category-widget sidebar-widget">
                                 <div class="widget-title">
-                                    <h4>Categories</h4>
+                                    <h4>Ангилал</h4>
                                 </div>
                                 <div class="widget-content">
                                     <ul class="category-list clearfix">
                                         @foreach($categories as $category)
-                                        <li><a href="#"><i class="icon-7"></i>{{$category->name}}</a></li>
+                                        <li>
+                                            <a href="{{ url('shopcategory/'.$category->id) }}"><i class="icon-7"></i>{{$category->name}}</a>
+                                        </li>
                                         @endforeach
                                     </ul>
                                 </div>
                             </div>
-
-                            <!--
-
-                            <div class="price-filter sidebar-widget">
-                                <div class="widget-title">
-                                    <h4>by Price</h4>
-                                </div>
-                                <div class="range-slider clearfix p_relative">
-                                    <div class="price-range-slider"></div>
-                                    <div class="clearfix">
-                                        <div class="pull-left">
-                                            <button class="filter-btn">Filter</button>
-                                        </div>
-                                        <div class="pull-right">
-                                            <p>Price:</p>
-                                            <div class="title p_relative d_iblock"></div>
-                                            <div class="input p_relative d_iblock"><input type="text" class="property-amount" name="field-name" readonly=""></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tags-widget sidebar-widget">
-                                <div class="widget-title">
-                                    <h4>Tags</h4>
-                                </div>
-                                <div class="widget-content">
-                                    <ul class="tags-list clearfix">
-                                        <li><a href="shop-details.html">Electrical</a></li>
-                                        <li><a href="shop-details.html">Hammer</a></li>
-                                        <li><a href="shop-details.html">Screw Driver</a></li>
-                                        <li><a href="shop-details.html">External</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            -->
-
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-12 cols-sm-12 content-side">
@@ -99,13 +47,13 @@
                                     <div class="btn-box float_left p_relative clearfix mr_30">
                                         <button class="grid-view on p_relative d_iblock fs_20 b_radius_5 mr_2 centred"><i class="icon-76"></i></button>
                                     </div>
-                                    <div class="text float_left"><p class="fs_16 font_family_poppins">Нийт <span class="color_black"> {{ $products->total() }}</span>-с <span class="color_black"> {{ $products->lastItem() }} </span>
+                                    <div class="text float_left"><p class="fs_16 font_family_poppins">
+                                        Нийт <span class="color_black"> {{ $products->total() }}</span>-с <span class="color_black"> {{ $products->lastItem() }} </span>
                                         <!-- {{ $products->total() }}</span> Results</p> -->
                                     </div>
-                                </div>
+                                </div>                                
 
-                                <!--
-
+                                <!-- 
                                 <div class="right-column pull-right clearfix">
                                     <div class="short-box clearfix">
                                         <div class="select-box">
@@ -118,7 +66,6 @@
                                         </div>
                                     </div>
                                 </div>
-
                                 -->
 
                             </div>
@@ -126,13 +73,15 @@
                                 <div class="shop-grid-content">
                                     <div class="row clearfix">
                                         @foreach($products as $product)
-                                        <div class="col-lg-4 col-md-6 col-sm-12 shop-block">
+                                        <a href="{{ url($product->Product_category->link .'/product/'. $product->id) }}" class="col-lg-4 col-md-6 col-sm-12 shop-block">
                                             <div class="shop-block-one">
                                                 <div class="inner-box">
                                                     <div class="image-box">
-                                                        <span class="hot">Hot</span>
-                                                        <figure class="image"><img src="{{ '/storage/'.$product->picture }}" alt=""></figure>
-
+                                                        <!-- <span class="hot">Hot</span> -->
+                                                        <!-- <figure class="image"><img src="{{ '/storage/'.$product->picture }}" alt=""></figure> -->
+                                                        <figure class="image">
+                                                            <img src="{{ file_exists(public_path('/storage/'.$product->picture)) ? asset('storage/'.$product->picture) : asset('images/no-image.png') }}" alt="">
+                                                        </figure>
                                                         <!--
 
                                                         <ul class="option-list clearfix">
@@ -146,7 +95,7 @@
 
                                                     </div>
                                                     <div class="lower-content">
-                                                        <h6><a href="{{ url($product->Product_category->link .'/product/'. $product->id) }}">{{$product->name}}</a></h6>
+                                                        <h6 class="product-name">{{$product->name}}</h6>
                                                         <ul class="rating clearfix">
                                                             <li><i class="icon-71"></i></li>
                                                             <li><i class="icon-71"></i></li>
@@ -158,7 +107,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </a>
                                         @endforeach
                                     </div>
                                 </div>
