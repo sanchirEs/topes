@@ -46,53 +46,32 @@
                 </div>
 
                 <div class="product-details-qz">
-                    <h3>Асуулт, Хариулт</h3>
+                <h3>Асуулт, Хариулт</h3>
                     <hr>
+
+                    <!-- Display Questions -->
                     <div class="questions">
-                        <div class="question">
-                            <p class="timestamp">2025-05-14 16:45</p>
-                            <p><strong>Jane Smith:</strong> Is it available in other colors?</p>
+                        @foreach($questions as $question)
+                            <div class="question">
+                                <p class="timestamp">{{ $question->created_at->format('Y-m-d H:i') }}</p>
+                                <p><strong>{{ $question->asker_name }}:</strong> {{ $question->question_text }}</p>
 
-                            <div class="reply">
-                                <p class="timestamp">2025-05-14 17:10</p>
-                                <p><strong>Admin:</strong> Yes, it is available in red, blue, and black.</p>
+                                @if($question->answer_text)
+                                    <div class="reply">
+                                        <p class="timestamp">{{ optional($question->answered_at)->format('Y-m-d H:i') }}</p>
+                                        <p><strong>{{ $question->answered_by }}:</strong> {{ $question->answer_text }}</p>
+                                    </div>
+                                @endif
                             </div>
-                        </div>
-
-                        <div class="question">
-                            <p class="timestamp">2025-05-14 16:45</p>
-                            <p><strong>Jane Smith:</strong> Is it available in other colors?</p>
-
-                            <div class="reply">
-                                <p class="timestamp">2025-05-14 17:10</p>
-                                <p><strong>Admin:</strong> Yes, it is available in red, blue, and black.</p>
-                            </div>
-                        </div>
-
-                        <div class="question">
-                            <p class="timestamp">2025-05-14 16:45</p>
-                            <p><strong>Jane Smith:</strong> Is it available in other colors?</p>
-
-                            <div class="reply">
-                                <p class="timestamp">2025-05-14 17:10</p>
-                                <p><strong>Admin:</strong> Yes, it is available in red, blue, and black.</p>
-                            </div>
-                        </div>
-
-                        <div class="question">
-                            <p class="timestamp">2025-05-14 16:45</p>
-                            <p><strong>Jane Smith:</strong> Is it available in other colors?</p>
-
-                            <div class="reply">
-                                <p class="timestamp">2025-05-14 17:10</p>
-                                <p><strong>Admin:</strong> Yes, it is available in red, blue, and black.</p>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
-                    <form class="question-form">
-                        <input type="text" name="name" id="name" placeholder="Таны нэр" required>
-                        <input type="text" name="email" id="email" placeholder="Таны цахим шуудан" required>
-                        <textarea name="text" id="text" placeholder="Асуулт, Хариулт . . ." required></textarea>
+
+                    <!-- Question Submission Form -->
+                    <form action="{{ route('questions.store') }}" method="POST" class="question-form">
+                        @csrf
+                        <input type="hidden" name="product_id" value="{{ $productId }}">
+                        <input type="text" name="asker_name" placeholder="Таны нэр">
+                        <textarea name="question_text" placeholder="Асуулт, Хариулт . . ." required></textarea>
                         <button type="submit" class="theme-btn btn-one">Илгээх</button>
                     </form>
 

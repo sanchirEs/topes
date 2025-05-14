@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductQuestionController;
 
 View::composer(['layouts.master'],function ($view) {
   $view->with('categories', \App\Models\Product_category::orderBy('sort_order','ASC')->get());
@@ -15,5 +16,7 @@ Route::get('/shopcategory/{id}', [HomeController::class, 'shopcategory'])->name(
 Route::get('/{categorylink}/product/{id}', [HomeController::class, 'product'])->name('product');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contactpage');
 Route::post('/upload-file', [FileUploadController::class, 'upload']);
-
-
+Route::post('/questions/store', [ProductQuestionController::class, 'store'])->name('questions.store');
+Route::post('/questions/{id}/reply', [ProductQuestionController::class, 'reply'])->name('questions.reply');
+// Route::delete('/questions/{id}', [ProductQuestionController::class, 'destroy'])->name('questions.destroy');
+// Route::post('/questions/{id}/reply', [ProductQuestionController::class, 'updateReply'])->name('questions.updateReply');

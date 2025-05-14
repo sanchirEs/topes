@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\ProductQuestion;
 use App\Models\Blog_gallery;
 use App\Models\Blog_post;
 use App\Models\Partner;
@@ -29,7 +30,6 @@ class HomeController extends Controller
 
     public function about() 
     {
-
         return view('about',);
     }
 
@@ -53,18 +53,21 @@ class HomeController extends Controller
         return view('shopcategory',$data);
     }
 
-    public function product($categorylink,$id)
-    {
+    public function product($categorylink, $id)
+    {        
+        $data['productId'] = $id;
+
         $data['product'] = Product::where('id',$id)->with(['Product_category'])->first();
 
         $data['others'] = Product::where('id','!=',$id)->with(['Product_category'])->inRandomOrder()->limit(4)->get();
+
+        $data['questions'] = ProductQuestion::where('product_id', $id)->orderBy('created_at', 'desc')->get();
 
         return view('product',$data);
     }
 
     public function contact() 
     {
-
         return view('contact',);
     }
 

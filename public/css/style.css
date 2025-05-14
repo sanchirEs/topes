@@ -12372,7 +12372,7 @@ div#mCSB_1_container{
 .product-details-qz .timestamp {
   font-size: 0.8rem;
   color: #888;
-  margin-bottom: 5px;
+  /* margin-bottom: 5px; */
 }
 
 .product-details-qz form {
@@ -12415,4 +12415,20 @@ div#mCSB_1_container{
 
 .reply .timestamp {
   margin-bottom: 3px;
+}
+
+.questions, .question, .reply {
+  word-wrap: break-word;  /* Break long words */
+  word-break: break-word; /* Break long words */
+  white-space: normal;    /* Allow text to wrap */
+}
+
+.question p, .reply p {
+  overflow-wrap: break-word; /* Wrap long words */
+  margin: 5px 0;             /* Spacing between paragraphs */
+}
+
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
