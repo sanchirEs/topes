@@ -25,8 +25,26 @@
                     <div class="row clearfix">
                         <div class="col-lg-6 col-md-12 col-sm-12 image-column">
                             <div class="image-box p_relative d_block">
-                                <figure class="image"><img src="{{ '/storage/'.$product->picture }}" alt=""></figure>
-                                <div class="preview-link p_absolute t_20 r_20"><a href="{{ '/storage/'.$product->picture }}" class="lightbox-image p_relative d_iblock fs_20 centred z_1 w_50 h_50 color_black lh_50" data-fancybox="gallery"><i class="icon-63"></i></a></div>
+                                <figure class="image">
+                                    @if($product->picture)
+                                        <img src="{{ Storage::url($product->picture) }}" alt="{{ $product->name }}">wtf
+                                    @else
+                                        <img src="{{ asset('images/default.png') }}" alt="Default image">
+                                    @endif
+                                </figure>
+                                <div class="preview-link p_absolute t_20 r_20">
+                                    @if($product->picture)
+                                        <a href="{{ Storage::url($product->picture) }}"
+                                        class="lightbox-image …" data-fancybox="gallery">
+                                        <i class="icon-63"></i>
+                                        </a>
+                                    @else
+                                        <a href="{{ asset('images/default.png') }}"
+                                        class="lightbox-image …" data-fancybox="gallery">
+                                        <i class="icon-63"></i>
+                                        </a>
+                                    @endif
+                                </div>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-12 col-sm-12 content-column">
