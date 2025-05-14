@@ -12335,3 +12335,84 @@ div#mCSB_1_container{
   margin-left: 8px;
   top: 2px;
 }
+
+/* body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    padding: 20px;
+} */
+
+.product-details-qz {
+  /* max-width: 600px; */
+  margin: 0 auto;
+  background-color: #fff;
+  /* border-radius: 8px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.product-details-qz h2, h3 {
+  color: #333;
+}
+
+.product-details-qz .questions {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.product-details-qz .question, .reply {
+  margin: 5px 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+  /* border-radius: 5px; */
+  position: relative;
+}
+
+.product-details-qz .timestamp {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.product-details-qz form {
+  margin: 10px 0;
+}
+
+.product-details-qz input, textarea {
+  /* width: calc(100% - 20px); */
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.product-details-qz button {
+  padding: 8px 12px;
+  background-color: #0c72a3;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.product-details-qz button:hover {
+  background-color: #085a7a;
+}
+
+.product-details-qz hr {
+  margin: 15px 0;
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+.reply {
+  margin-left: 20px;
+  background-color: #e9ecef;
+}
+
+.reply .timestamp {
+  margin-bottom: 3px;
+}
