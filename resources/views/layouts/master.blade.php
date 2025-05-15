@@ -172,7 +172,7 @@
                                                         </ul>
                                                     </li>
                                                     <!-- <li><a href="#gallery">Blog</a></li> -->
-                                                    <li><a href="#contact">Холбоо барих</a></li>
+                                                    <li><a href="#contact" style="color: #eb7328;">Холбоо барих</a></li>
                                                 </ul>
                                             </div>
                                         </nav>

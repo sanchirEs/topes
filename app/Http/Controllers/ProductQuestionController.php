@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ProductQuestion;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ProductQuestionController extends Controller
 {   
@@ -75,6 +76,27 @@ class ProductQuestionController extends Controller
         // Update the reply fields
         $question->update([
             'answer_text' => $request->input('answer_text'),
+            'answered_by' => $request->input('answered_by') ?: 'Админ',
+            'answered_at' => now(),
+            'status' => 1,  // Mark as answered
+        ]);
+
+        return redirect()->back()->with('success', 'Reply updated successfully!');
+    }
+
+    public function destroyReply(Request $request, $id)
+    {
+        $request->validate([
+            'answer_text' => 'required|string',
+            'answered_by' => 'nullable|string|max:255',
+        ]);
+
+        // Find the question by ID
+        $question = ProductQuestion::findOrFail($id);
+
+        // Update the reply fields
+        $question->update([
+            'answer_text' => '',
             'answered_by' => $request->input('answered_by') ?: 'Админ',
             'answered_at' => now(),
             'status' => 1,  // Mark as answered
