@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="product-details-qz">
-                <h3>Асуулт, Хариулт</h3>
+                    <h3>Асуулт, Хариулт</h3>
                     <hr>
 
                     <!-- Display Questions -->
@@ -55,16 +55,57 @@
                             <div class="question">
                                 <p class="timestamp">{{ $question->created_at->format('Y-m-d H:i') }}</p>
                                 <p><strong>{{ $question->asker_name }}:</strong> {{ $question->question_text }}</p>
+                                
+                                @if((auth()->user()))
+                                    <form action="{{ route('questions.destroy', $question->id) }}" method="POST" style="display:inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Асуултыг устгах</button>
+                                    </form>
+                                @endif
 
-                                @if($question->answer_text)
+                                @if($question->answer_text && !(auth()->user()))
                                     <div class="reply">
-                                        <p class="timestamp">{{ optional($question->answered_at)->format('Y-m-d H:i') }}</p>
+                                        <p class="timestamp">{{ optional($question->updated_at)->format('Y-m-d H:i') }}</p>
                                         <p><strong>{{ $question->answered_by }}:</strong> {{ $question->answer_text }}</p>
                                     </div>
                                 @endif
+
+                                @auth
+                                    @if(auth()->user())
+                                        <div class="admin-actions" style="margin-top: 5px;">
+                                            @if($question->answer_text)
+                                                <!-- Edit Reply Form -->
+                                                <form action="{{ route('questions.updateReply', $question->id) }}" method="POST" style="display:inline;">
+                                                    @csrf
+                                                    @method('PUT')
+                                                    <input type="hidden" name="action" value="update">
+                                                    <textarea name="answer_text" placeholder="Хариулт засах . . ." >{{ $question->answer_text }}</textarea>
+                                                    <button type="submit" class="btn btn-primary btn-sm">Засах</button>
+                                                </form>
+
+                                                <!-- Delete Reply -->
+                                                <!-- <form action="{{ route('questions.destroyReply', $question->id) }}" method="POST" style="display:inline;">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="btn btn-danger btn-sm">Устгах</button>
+                                                </form> -->
+                                            @else
+                                                <!-- Reply Form -->
+                                                <form action="{{ route('questions.reply', $question->id) }}" method="POST" style="display:inline;">
+                                                    @csrf
+                                                    @method('POST')
+                                                    <textarea name="answer_text" placeholder="Хариулт бичих . . ." required></textarea>
+                                                    <button type="submit" class="btn btn-success btn-sm">Хариулах</button>
+                                                </form>
+                                            @endif
+                                        </div>
+                                    @endif
+                                @endauth
                             </div>
                         @endforeach
                     </div>
+
 
                     <!-- Question Submission Form -->
                     <form action="{{ route('questions.store') }}" method="POST" class="question-form">
@@ -74,21 +115,6 @@
                         <textarea name="question_text" placeholder="Асуулт, Хариулт . . ." required></textarea>
                         <button type="submit" class="theme-btn btn-one">Илгээх</button>
                     </form>
-
-                    <!-- <h3>Q&A Section</h3>
-                    <div class="question">
-                        <p><strong>John Doe:</strong> What is the product warranty?</p>
-
-                        <div class="reply">
-                            <p><strong>Admin:</strong> The product has a 1-year warranty.</p>
-                        </div>
-
-                        <form class="reply-form">
-                            <input type="text" placeholder="Your Name" required>
-                            <textarea placeholder="Reply..." required></textarea>
-                            <button type="submit">Reply</button>
-                        </form>
-                    </div> -->
                 </div>
 
                 <div class="related-product mt_30">
@@ -97,7 +123,7 @@
                     </div>
                     <div class="row clearfix">
                         @foreach($others as $other)
-                        <div class="col-lg-3 col-md-6 col-sm-12 shop-block">
+                        <a href="{{ url( $other->Product_category->link .'/product/'. $other->id ) }}" class="col-lg-3 col-md-6 col-sm-12 shop-block">
                             <div class="shop-block-one">
                                 <div class="inner-box">
                                     <div class="image-box">
@@ -108,13 +134,13 @@
                                     </div>
                                     <div class="lower-content">
                                         <h6>
-                                            <a href="{{ url( $other->Product_category->link .'/product/'. $other->id ) }}">{{$other->name}}</a>
+                                            {{$other->name}}
                                         </h6>
                                         <span class="price">{{ number_format($other->price) }}₮</span>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         @endforeach
                     </div>
                 </div>

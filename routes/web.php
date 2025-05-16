@@ -8,6 +8,9 @@ View::composer(['layouts.master'],function ($view) {
   $view->with('categories', \App\Models\Product_category::orderBy('sort_order','ASC')->get());
 });
 
+// Route::middleware(['web'])->group(function () {
+//   Filament::routes();
+// });
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/about', [HomeController::class, 'about'])->name('aboutpage');
@@ -18,5 +21,7 @@ Route::get('/contact', [HomeController::class, 'contact'])->name('contactpage');
 Route::post('/upload-file', [FileUploadController::class, 'upload']);
 Route::post('/questions/store', [ProductQuestionController::class, 'store'])->name('questions.store');
 Route::post('/questions/{id}/reply', [ProductQuestionController::class, 'reply'])->name('questions.reply');
-// Route::delete('/questions/{id}', [ProductQuestionController::class, 'destroy'])->name('questions.destroy');
-// Route::post('/questions/{id}/reply', [ProductQuestionController::class, 'updateReply'])->name('questions.updateReply');
+Route::delete('/questions/{id}', [ProductQuestionController::class, 'destroy'])->name('questions.destroy');
+Route::put('/questions/{id}/updateReply', [ProductQuestionController::class, 'updateReply'])->name('questions.updateReply');
+Route::delete('/questions/{id}/destroyReply', [ProductQuestionController::class, 'destroy'])->name('questions.destroyReply');
+
