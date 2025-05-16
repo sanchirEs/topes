@@ -92,7 +92,7 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- Service 4 -->
+                        <!-- Service 4
                         <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
                             <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
                                 <div class="inner-box">
@@ -105,7 +105,7 @@
                                     <p>Тоног төхөөрөмжийн угсралт суурилуулалт тохиргооны зөвөлгөө, сургалт</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
                 </div>
