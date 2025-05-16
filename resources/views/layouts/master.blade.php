@@ -106,16 +106,16 @@
                     <div class="top-inner">
                         <div class="left-column">
                             <div class="text">
-                                <p><i class="icon-45"></i>Top Электро Сигнал</p>
+                                <p><i class="icon-45"></i>Tоп Электро Сигнал</p>
                             </div>
                         </div>
                         <div class="right-column">
                             <ul class="social-links clearfix">
                                 <li><p>Биднийг дагаарай:</p></li>
-                                <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-pinterest-p"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100070263963581"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100070263963581"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100070263963581"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100070263963581"><i class="fab fa-pinterest-p"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -299,8 +299,8 @@
                                 <div class="widget-content">
                                     <ul class="info-list clearfix">
                                         <li>Улаанбаатар хот, Баянгол дүүрэг, 16-р хороо, Амарсанаагийн гудамж, Гандан, 12В байр 14 тоот</li>
-                                        <li><a href="tel:23055873407">+976 9911-4532</a></li>
-                                        <li><a href="mailto:sample@example.com">info@topes.mn</a></li>
+                                        <li><a href="tel:97677174532">+976 7717-4532</a> - Ажлын цагаар</li>
+                                        <li><a href="mailto:info@topes.mn">info@topes.mn</a></li>
                                     </ul>
                                 </div>
                             </div>

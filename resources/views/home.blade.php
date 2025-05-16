@@ -12,7 +12,7 @@
                     <div class="image-layer p_absolute" style="background-image:url(/images/banner/banner-1.jpg)"></div>
                     <div class="auto-container">
                         <div class="content-box p_relative d_block z_5">
-                            <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_9">Монголын <span>шилдэг </span> цахилгааны үйлчилгээ</h2>
+                            <h2 class="p_relative d_block fs_60 lh_70 fw_bold mb_9">Монголын цахилгаан холбоо дохиоллын <span>шилдэг </span> үйлчилгээ</h2>
                             <p class="p_relative d_block fs_18">Бид барилгын цахилгаан, холбоо дохиолол, автоматжуулалт, угсралтын дараах засвар үйлчилгээний цогц шийдлийг санал болгож байна. Бидний мэргэшсэн баг таны төсөлд хамгийн өндөр түвшний мэргэжлийн үйлчилгээг үзүүлнэ.</p>
                             <div class="btn-box"><a href="/about" class="theme-btn btn-one">Компанийн тухай</a></div>
                         </div> 
@@ -57,7 +57,7 @@
                                     <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5">
                                         <i class="icon-12"></i>
                                     </div>
-                                    <h3 class="p_relative d_block"><a href="#">Цахилгааны цогц үйлчилгээ</a></h3>
+                                    <h3 class="p_relative d_block"><a href="#">Цахилгаан, холбоо дохиоллын цогц үйлчилгээ</a></h3>
                                     <p>Барилгын цахилгаан, холбоо дохиолол, автоматжуулалт</p>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                     <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5">
                                         <i class="icon-12"></i>
                                     </div>
-                                    <h3 class="p_relative d_block"><a href="#">Төхөөрөмжийн худалдаа</a></h3>
+                                    <h3 class="p_relative d_block"><a href="#">Тоног төхөөрөмжийн худалдаа</a></h3>
                                     <p>Дохиолол, домофоны тоног төхөөрөмжийн худалдаа</p>
                                 </div>
                             </div>
@@ -88,7 +88,21 @@
                                         <i class="icon-12"></i>
                                     </div>
                                     <h3 class="p_relative d_block"><a href="#">Гэмтэл шалгах, засвар, үйлчилгээ</a></h3>
-                                    <p>Үрсэлтийн дараах гэмтэл шалгах, засвар үйлчилгээ</p>
+                                    <p>Угсралтын дараах гэмтэл шалгах, засвар үйлчилгээ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Service 4 -->
+                        <div class="col-lg-4 col-md-6 col-sm-12 feature-block">
+                            <div class="feature-block-two wow fadeInUp" data-wow-duration="1500ms">
+                                <div class="inner-box">
+                                    <div class="shape-1"></div>
+                                    <div class="shape-2"></div>
+                                    <div class="icon-box p_relative d_iblock w_100 h_100 lh_100 text-center b_radius_50 fs_50 z_1 tran_5">
+                                        <i class="icon-12"></i>
+                                    </div>
+                                    <h3 class="p_relative d_block"><a href="#">Зөвөлгөө сургалт</a></h3>
+                                    <p>Тоног төхөөрөмжийн угсралт суурилуулалт тохиргооны зөвөлгөө, сургалт</p>
                                 </div>
                             </div>
                         </div>
@@ -106,15 +120,15 @@
             <div class="auto-container">
                 <div class="sec-title p_relative mb_50 centred">
                     <h5 class="d_block fs_17 lh_25 fw_medium mb_9">БИДНИЙ ТУХАЙ</h5>
-                    <h2 class="d_block fs_40 lh_50 fw_bold">ТОП ЭЛЕКТРО СИГНАЛ ХХК  </h2>
+                    <h2 class="d_block fs_40 lh_50 fw_bold">"ТОП ЭЛЕКТРО СИГНАЛ" ХХК  </h2>
                 </div>
                 <div class="row clearfix">
                     <div class="col-lg-6 col-md-12 col-sm-12 content-column">
                         <div class="content_block_seven">
                             <div class="content-box">
                                 <div class="text p_relative d_block mb_25">
-                                    <p class="fw_medium bold-text mb_25">Бид бүх төрлийн цахилгаан угсралт, суурилуулалт, уггал шалгалтыг найдвартай гүйцэтгэдэг.</p>
-                                    <p class="fw_medium bold-text mb_25">Таны аюулгүй байдал бидний тэргүүлэх зорилт тул туршлагатай инженер, цахилгаанчид манай танд найдвартай үйлчилгээг санал болгож байна.</p>
+                                    <p class="fw_medium bold-text mb_25">Бид бүх төрлийн цахилгааны угсралт, суурилуулалт, үзлэг шалгалтыг найдвартай гүйцэтгэдэг.</p>
+                                    <p class="fw_medium bold-text mb_25">Таны аюулгүй байдал бидний тэргүүлэх зорилт тул туршлагатай инженер, техникийн ажилчид манай танд найдвартай үйлчилгээг санал болгож байна.</p>
                                     <!-- <p class="fw_medium bold-text mb_25">Бид бүх төрлийн цахилгаан угсралт, суурилуулалт, уггал шалгалтыг найдвартай гүйцэтгэдэг.  </p> -->
                                     </div>
                                 <div class="inner-box">
@@ -123,7 +137,7 @@
                                             <div class="left-content">
                                                 <h4>Үйлчилгээний онцлог:</h4>
                                                 <ul class="list-style-one clearfix">
-                                                    <li>Олон жилийн туршлагатай цахилгаан инженерүүд </li>
+                                                    <li>Олон жилийн туршлагатай инженер, техникийн ажилтан</li>
                                                     <li>Олон улсын стандартад нийцсэн угсралт, суурилуулалт</li>
                                                     <li>Цахилгааны иж бүрэн зураг төсөл, төлөвлөлт</li>
                                                 </ul>
@@ -134,7 +148,7 @@
                                             <div class="right-content mt_8">
                                                 <div class="single-item">
                                                     <div class="icon-box"><i class="icon-10"></i></div>
-                                                    <h4>Шинэчлэн угсралт, үзлэг шалгалт</h4>
+                                                    <h4>Угсралт, үзлэг шалгалт</h4>
                                                 </div>
                                                 <div class="single-item">
                                                     <div class="icon-box"><i class="icon-9"></i></div>
@@ -154,7 +168,7 @@
                                 <div class="text centred">
                                     <div class="icon-box"><i class="icon-37"></i></div>
                                     <p class="fs_20 lh_30 fw_medium mb_10">Холбоо барих</p>
-                                    <h3><a href="tel:0124357689">+976 91114532 </a></h3>
+                                    <h3><a href="tel:0124357689">+976 77174532 </a></h3>
                                 </div>
                                 <div >
                                     <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="lightbox-image" data-caption=""><i class="icon-27"></i></a>
@@ -232,7 +246,7 @@
                                     <div class="count-outer count-box">
                                         <span class="count-text" data-speed="1500" data-stop="35">0</span>
                                     </div>
-                                    <p>Энжинерүүд</p>
+                                    <p>Инженер, Техникийн Ажилтан</p>
                                 </div>
                             </div>
                         </div>
@@ -241,7 +255,7 @@
                                 <div class="inner-box">
                                     <div class="icon-box"><i class="icon-41"></i></div>
                                     <div class="count-outer count-box">
-                                        <span class="count-text" data-speed="1500" data-stop="10">0</span>
+                                        <span class="count-text" data-speed="1500" data-stop="18">0</span>
                                     </div>
                                     <p>Ажилласан жил</p>
                                 </div>
@@ -271,7 +285,7 @@
                                 <h2 class="d_block fs_40 lh_50 fw_bold">Яагаад биднийг сонгох хэрэгтэй вэ?  </h2>
                             </div>
                             <div class="text p_relative d_block mb_40">
-                                <p>Таны аюулгүй байдал бидний хамгийн чухал зорилт. Манай туршлагатай инженерүүд болон техникчид эелдэг харилцаатай, цаг баримталдаг бөгөөд таны сонирхсон асуултад бүрэн дүүрэн, ойлгомжтой байдлаар хариулна.</p>
+                                <p>Таны аюулгүй байдал бидний хамгийн чухал зорилт. Манай туршлагатай инженер, техникийн ажилчид эелдэг харилцаатай, цаг баримталдаг бөгөөд таны сонирхсон асуултад бүрэн дүүрэн, ойлгомжтой байдлаар хариулна.</p>
                             </div>
                             <div class="inner-box">
                                 <div class="row clearfix">
@@ -285,7 +299,7 @@
                                     <div class="col-lg-6 col-md-6 col-sm-12 single-column">
                                         <div class="single-item">
                                             <div class="icon-box"><i class="icon-22"></i></div>
-                                            <h4>Мэргэжлийн цахилгаан инженерүүд</h4>
+                                            <h4>Мэргэжлийн инженер, техникийн ажилчид</h4>
                                             <!-- <p>Lorem ipsum dolor amet con adicing elit sed.</p> -->
                                         </div>
                                     </div>
@@ -485,7 +499,7 @@
                                         </div>
                                         <div class="acc-content current">
                                             <div class="text">
-                                                <p>Бид төрлийн обьектод цахилгааны бүх төрлийн үйлчилгээ үзүүлдэг. Мэргэжлийн инженер, техникийн баг нь стандартын дагуу монтаж, засварын ажлыг шуурхай гүйцэтгэнэ.</p>
+                                                <p>Бүх төрлийн обьектод цахилгааны бүх төрлийн үйлчилгээ үзүүлдэг. Мэргэжлийн инженер, техникийн баг нь стандартын дагуу монтаж, засварын ажлыг шуурхай гүйцэтгэнэ.</p>
                                             </div>
                                         </div>
                                     </li>
