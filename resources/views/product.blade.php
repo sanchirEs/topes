@@ -31,20 +31,39 @@
                                     alt="">
                             </figure>
                             <!-- <div class="preview-link p_absolute t_20 r_20">
-                                        <a href="{{ '/storage/'.$product->picture }}" class="lightbox-image p_relative d_iblock fs_20 centred z_1 w_50 h_50 color_black lh_50" data-fancybox="gallery"><i class="icon-63"></i></a>
-                                    </div> -->
+                                                <a href="{{ '/storage/'.$product->picture }}" class="lightbox-image p_relative d_iblock fs_20 centred z_1 w_50 h_50 color_black lh_50" data-fancybox="gallery"><i class="icon-63"></i></a>
+                                            </div> -->
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
-                        <div class="product-details p_relative d_block ml_20">
-                            <h2 class="d_block fs_30 lh_40 fw_sbold mb_5">{{$product->name}}</h2>
-                            <span
-                                class="price p_relative d_block fs_20 lh_30 fw_medium mb_25">{{ number_format($product->price) }}₮</span>
-                            <div class="text p_relative d_block mb_30">
-                                {!! $product->description !!}
-                            </div>
-                        </div>
-                    </div>
+<div class="col-lg-6 col-md-12 col-sm-12 content-column">
+  <div class="product-details p_relative d_block ml_20">
+    <h2 class="fs_30 lh_40 fw_sbold mb-4">
+      {{ $product->name }}
+    </h2>
+
+    <div class="pricing-details mb-4">
+      <div class="d-flex justify-content-between mb-2">
+        <span class="text-muted">Үнэ:</span>
+        <span class="fw-regular">{{ number_format($product->price) }}₮</span>
+      </div>
+      <div class="d-flex justify-content-between mb-2">
+        <span class="text-muted">НӨАТ (10%):</span>
+        <span class="fw-regular text-success">{{ number_format($product->vat) }}₮</span>
+      </div>
+      <hr style="border-color:#e2e2e2;margin:0.5rem 0;">
+      <div class="d-flex justify-content-between">
+        <span class="fw-semibold">Нийт үнэ:</span>
+        <span class="fs_24">{{ number_format($product->total) }}₮</span>
+      </div>
+    </div>
+
+    <div class="text p_relative d_block mb_30">
+      {!! $product->description !!}
+    </div>
+  </div>
+</div>
+
+
                 </div>
             </div>
 
@@ -92,10 +111,10 @@
 
                                             <!-- Delete Reply -->
                                             <!-- <form action="{{ route('questions.destroyReply', $question->id) }}" method="POST" style="display:inline;">
-                                                                        @csrf
-                                                                        @method('DELETE')
-                                                                        <button type="submit" class="btn btn-danger btn-sm">Устгах</button>
-                                                                    </form> -->
+                                                                                                                @csrf
+                                                                                                                @method('DELETE')
+                                                                                                                <button type="submit" class="btn btn-danger btn-sm">Устгах</button>
+                                                                                                            </form> -->
                                         @else
                                             <!-- Reply Form -->
                                             <form action="{{ route('questions.reply', $question->id) }}" method="POST"
@@ -128,40 +147,30 @@
                 <div class="title-text mb_30 ">
                     <h2 class="d_block fs_30 lh_40 fw_sbold">Бусад бүтээгдэхүүнүүд</h2>
                 </div>
-<div class="row clearfix">
-  @foreach($others as $other)
-    <a 
-      href="{{ url($other->Product_category->link . '/product/' . $other->id) }}"
-      class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch"
-      style="text-decoration: none;"
-    >
-      <div 
-        class="shop-block-one w-100 d-flex flex-column border rounded p-3"
-        style=" background-color:white;"
-      >
-        <!-- fixed image area -->
-        <div 
-          class="image-box mb-3 flex-shrink-0 d-flex justify-content-center align-items-center" 
-          style="height:180px; overflow:hidden;"
-        >
-          <img
-            src="{{ file_exists(public_path('storage/'.$other->picture))
-                      ? asset('storage/'.$other->picture)
-                      : asset('images/no-image.png') }}"
-            alt="{{ $other->name }}"
-            style="max-width:100%; max-height:100%; object-fit:contain;"
-          >
-        </div>
+                <div class="row clearfix">
+                    @foreach($others as $other)
+                                <a href="{{ url($other->Product_category->link . '/product/' . $other->id) }}"
+                                    class="col-lg-3 col-md-6 col-sm-12 mb-4 d-flex align-items-stretch" style="text-decoration: none;">
+                                    <div class="shop-block-one w-100 d-flex flex-column border rounded p-3"
+                                        style=" background-color:white;">
+                                        <!-- fixed image area -->
+                                        <div class="image-box mb-3 flex-shrink-0 d-flex justify-content-center align-items-center"
+                                            style="height:180px; overflow:hidden;">
+                                            <img src="{{ file_exists(public_path('storage/' . $other->picture))
+                        ? asset('storage/' . $other->picture)
+                        : asset('images/no-image.png') }}" alt="{{ $other->name }}"
+                                                style="max-width:100%; max-height:100%; object-fit:contain;">
+                                        </div>
 
-        <!-- content, pushed to bottom -->
-        <div class="lower-content text-center mt-auto">
-          <h6 class="mb-2" style="font-size:1rem; line-height:1.2;">{{ $other->name }}</h6>
-          <span class="price font-weight-bold">{{ number_format($other->price,0) }}₮</span>
-        </div>
-      </div>
-    </a>
-  @endforeach
-</div>
+                                        <!-- content, pushed to bottom -->
+                                        <div class="lower-content text-center mt-auto" style="color:black;">
+                                            <h6 class="mb-2" style="font-size:1rem; line-height:1.2;">{{ $other->name }}</h6>
+                                            <span class="price font-weight-bold" >{{ number_format($other->total, 0) }}₮</span>
+                                        </div>
+                                    </div>
+                                </a>
+                    @endforeach
+                </div>
 
             </div>
         </div>

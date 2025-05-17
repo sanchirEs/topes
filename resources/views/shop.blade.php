@@ -155,7 +155,8 @@
                                                                                 <!-- clamp description to 2 lines -->
                                                                                 <p class="clamp-2 mb-2">{!! Str::words($product->product, 10) !!}</p>
                                                                                 <div class="font-weight-bold" style="color:black;">
-                                                                                    {{ number_format($product->price, 0) }}₮
+                                                                                    {{ number_format($product->total, 0) }}₮
+                                                                                    <!-- {{ number_format($product->vat, 0) }}₮ -->
                                                                                 </div>
                                                                             </div>
                                                                         </div>

@@ -59,19 +59,19 @@
                             </div>
 
                             <!-- 
-                                    <div class="right-column pull-right clearfix">
-                                        <div class="short-box clearfix">
-                                            <div class="select-box">
-                                                <select class="wide">
-                                                   <option data-display="Popularity">Popularity</option>
-                                                   <option value="1">New Collection</option>
-                                                   <option value="2">Top Sell</option>
-                                                   <option value="4">Top Ratted</option>
-                                                </select>
+                                        <div class="right-column pull-right clearfix">
+                                            <div class="short-box clearfix">
+                                                <div class="select-box">
+                                                    <select class="wide">
+                                                       <option data-display="Popularity">Popularity</option>
+                                                       <option value="1">New Collection</option>
+                                                       <option value="2">Top Sell</option>
+                                                       <option value="4">Top Ratted</option>
+                                                    </select>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    -->
+                                        -->
 
                         </div>
                         <div class="wrapper grid">
@@ -97,7 +97,7 @@
                                                                                 <h6 class="clamp-2 mb-2">{{ $product->name }}</h6>
                                                                                 <p class="clamp-2 mb-2">{!! Str::words($product->product, 10) !!}</p>
                                                                                 <div class="font-weight-bold" style="color: black;">
-                                                                                    {{ number_format($product->price, 0) }}₮
+                                                                                    {{ number_format($product->total, 0) }}₮
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -469,16 +469,16 @@
 
                             <!--
 
-                                    <ul class="pagination clearfix">
-                                        <li><a href="shop.html" class="current">1</a></li>
-                                        <li><a href="shop.html">2</a></li>
-                                        <li><a href="shop.html">3</a></li>
-                                        <li class="dot">...</li>
-                                        <li><a href="shop.html">9</a></li>
-                                        <li><a href="shop.html"><i class="icon-7"></i></a></li>
-                                    </ul>
+                                        <ul class="pagination clearfix">
+                                            <li><a href="shop.html" class="current">1</a></li>
+                                            <li><a href="shop.html">2</a></li>
+                                            <li><a href="shop.html">3</a></li>
+                                            <li class="dot">...</li>
+                                            <li><a href="shop.html">9</a></li>
+                                            <li><a href="shop.html"><i class="icon-7"></i></a></li>
+                                        </ul>
 
-                                    -->
+                                        -->
 
                         </div>
                     </div>
@@ -491,30 +491,30 @@
 
     <!-- subscribe-section 
 
-            <section class="subscribe-section p_relative bg-color-4">
-                <div class="auto-container">
-                    <div class="inner-container">
-                        <div class="row align-items-center clearfix">
-                            <div class="col-lg-6 col-md-12 col-sm-12 text-column">
-                                <div class="text p_relative d_block">
-                                    <h2>Subscribe to Our Newsletter</h2>
+                <section class="subscribe-section p_relative bg-color-4">
+                    <div class="auto-container">
+                        <div class="inner-container">
+                            <div class="row align-items-center clearfix">
+                                <div class="col-lg-6 col-md-12 col-sm-12 text-column">
+                                    <div class="text p_relative d_block">
+                                        <h2>Subscribe to Our Newsletter</h2>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-md-12 col-sm-12 form-column">
-                                <div class="form-inner p_relative d_block">
-                                    <form action="index.html" method="post">
-                                        <div class="form-group">
-                                            <input type="email" name="email" placeholder="Your email address" required="">
-                                            <button type="submit">Subscribe Now<i class="icon-7"></i></button>
-                                        </div>
-                                    </form>
+                                <div class="col-lg-6 col-md-12 col-sm-12 form-column">
+                                    <div class="form-inner p_relative d_block">
+                                        <form action="index.html" method="post">
+                                            <div class="form-group">
+                                                <input type="email" name="email" placeholder="Your email address" required="">
+                                                <button type="submit">Subscribe Now<i class="icon-7"></i></button>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            subscribe-section end -->
+                subscribe-section end -->
 
 @endsection
