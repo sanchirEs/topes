@@ -124,42 +124,47 @@
                             </div>
                             <div class="wrapper grid">
                                 <div class="shop-grid-content">
-                                    <div class="row clearfix">
-                                        @foreach($products as $product)
-                                        <a href="{{ url( $product->Product_category->link .'/product/'. $product->id ) }}" 
-                                            class="col-lg-4 col-md-6 col-sm-12 shop-block">
-                                            <div class="shop-block-one">
-                                                <div class="inner-box">
-                                                    <div class="image-box">
-                                                        <!-- <span class="hot">Hot</span> -->
-                                                        <!-- <figure class="image"><img src="{{ '/storage/'.$product->picture }}" alt=""></figure> -->
-                                                        <figure class="image">
-                                                            <img src="{{ file_exists(public_path('/storage/'.$product->picture)) ? asset('storage/'.$product->picture) : asset('images/no-image.png') }}" alt="">
-                                                        </figure>
-                                                        <!--
+<div class="row clearfix align-items-stretch">
+  @foreach($products as $product)
+    <div class="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
+      <!-- 1) Use a single <a> as the flex container, full-width & full-height -->
+      <a 
+        href="{{ url($product->Product_category->link .'/product/'. $product->id) }}" 
+        class="shop-block d-flex flex-column w-100"
+        style="text-decoration: none; background-color:white;"
+      >
+        <!-- 2) Make this grow to fill the anchor -->
+        <div class="shop-block-one d-flex flex-column flex-grow-1 border p-3">
+          <!-- fixed-height image area -->
+          <div 
+            class="image-box mb-3" 
+            style="flex: 0 0 200px; display:flex; justify-content:center; align-items:center; overflow:hidden;"
+          >
+            <img
+              src="{{ file_exists(public_path('storage/'.$product->picture)) 
+                        ? asset('storage/'.$product->picture) 
+                        : asset('images/no-image.png') }}"
+              alt="{{ $product->name }}"
+              style="max-width:100%; max-height:100%; object-fit:contain;"
+            >
+          </div>
 
-                                                        <ul class="option-list clearfix">
-                                                            <li><a href="shop.html"><i class="icon-57"></i></a></li>
-                                                            <li><a href="index-5.html"><i class="icon-62"></i></a></li>
-                                                            <li><a href="index-5.html"><i class="icon-61"></i></a></li>
-                                                            <li><a href="/images/shop/shop-48.png" class="lightbox-image" data-fancybox="gallery"><i class="icon-63"></i></a></li>
-                                                        </ul>
-                                                        
-                                                        -->
+          <!-- this pushes itself to the bottom, so all cards have same structure -->
+          <div class="lower-content mt-auto text-center">
+            <!-- clamp title to 2 lines -->
+            <h6 class="clamp-2 mb-2">{{ $product->name }}</h6>
+            <!-- clamp description to 2 lines -->
+            <p class="clamp-2 mb-2">{!! Str::words($product->product, 10) !!}</p>
+            <div class="font-weight-bold" style="color:black;">
+              {{ number_format($product->price, 0) }}₮
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  @endforeach
+</div>
 
-                                                    </div>
-                                                    <div class="lower-content">
-                                                        <h6 class="product-name">
-                                                            {{$product->name}}
-                                                        </h6>
-                                                        {!! \Illuminate\Support\Str::words($product->product, 10) !!}
-                                                        <span class="price">{{ number_format($product->price, 0) }}₮</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        @endforeach
-                                    </div>
                                 </div>
                                 <div class="shop-list-content">
                                     <div class="row clearfix">
