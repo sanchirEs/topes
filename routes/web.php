@@ -12,9 +12,10 @@ View::composer(['layouts.master'],function ($view) {
   $view->with('categories', \App\Models\Product_category::orderBy('sort_order','ASC')->get());
 });
 
-// Route::middleware(['web'])->group(function () {
-//   Filament::routes();
-// });
+
+Route::middleware(['web'])->group(function () {
+  Filament::routes();
+});
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/about', [HomeController::class, 'about'])->name('aboutpage');
