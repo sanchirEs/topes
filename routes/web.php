@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Filament\Facades\Filament;
+// use Filament\Facades\Filament;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductQuestionController;
 
-Filament::routes(); // ← this boots all the /admin routes
+// Filament::routes(); // ← this boots all the /admin routes
 
 
 View::composer(['layouts.master'],function ($view) {
@@ -13,9 +13,9 @@ View::composer(['layouts.master'],function ($view) {
 });
 
 
-Route::middleware(['web'])->group(function () {
-  Filament::routes();
-});
+// Route::middleware(['web'])->group(function () {
+//   Filament::routes();
+// });
 
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/about', [HomeController::class, 'about'])->name('aboutpage');

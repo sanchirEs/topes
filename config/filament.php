@@ -84,6 +84,10 @@ return [
     |
     */
 
+    'providers' => [
+        App\Providers\Filament\TopesAdminPanelProvider::class,
+    ],
+
     'livewire_loading_delay' => 'default',
 
 ];
