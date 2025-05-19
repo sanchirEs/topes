@@ -18,6 +18,8 @@ class ProductCategoryResource extends Resource
     protected static ?string $model = Product_category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationLabel = 'Ангилал';
+    protected static ?string $pluralLabel = 'Бараануудийн Ангилал';
 
     public static function form(Form $form): Form
     {
@@ -46,12 +48,15 @@ class ProductCategoryResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('name')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('sort_order')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('description')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -88,7 +93,7 @@ class ProductCategoryResource extends Resource
         return [
             'index' => Pages\ListProductCategories::route('/'),
             'create' => Pages\CreateProductCategory::route('/create'),
-            'view' => Pages\ViewProductCategory::route('/{record}'),
+            // 'view' => Pages\ViewProductCategory::route('/{record}'),
             'edit' => Pages\EditProductCategory::route('/{record}/edit'),
         ];
     }

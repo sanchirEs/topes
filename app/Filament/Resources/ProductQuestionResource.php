@@ -39,7 +39,10 @@ class ProductQuestionResource extends Resource
     public static function table(Table $table): Table
     {
         return $table->columns([
-            Tables\Columns\TextColumn::make('product.name')->label('Бараа')->sortable()->searchable()
+            Tables\Columns\TextColumn::make('product.name')
+            ->label('Бараа')
+            ->sortable()
+            ->searchable()
             ->wrap()
             ->url(fn($record) => url('/' . $record->product->Product_category->id . '/product/' . $record->product->id))
             ->openUrlInNewTab(),

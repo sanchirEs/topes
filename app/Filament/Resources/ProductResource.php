@@ -58,11 +58,14 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('Product_category.name')
+                    ->wrap()
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('picture'),
                 Tables\Columns\TextColumn::make('price')
