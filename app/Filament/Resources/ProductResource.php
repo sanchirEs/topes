@@ -38,7 +38,10 @@ class ProductResource extends Resource
                     ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('picture')
-                    ->label('Picture 270*250'),
+                    ->label('Picture 512*512')
+                    ->image()
+                    ->imageResizeMode('contain')
+                    ->imageResizeTargetWidth('512'),
                 Forms\Components\TextInput::make('price')
                     ->numeric()
                     ->default(0)
@@ -104,7 +107,7 @@ class ProductResource extends Resource
         return [
             'index' => Pages\ListProducts::route('/'),
             'create' => Pages\CreateProduct::route('/create'),
-            'view' => Pages\ViewProduct::route('/{record}'),
+            // 'view' => Pages\ViewProduct::route('/{record}'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
