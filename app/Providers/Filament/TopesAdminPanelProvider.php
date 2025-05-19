@@ -20,7 +20,7 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 use App\Http\Middleware\TrustProxies;
 
 
-class topesAdminPanelProvider extends PanelProvider
+class TopesAdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {

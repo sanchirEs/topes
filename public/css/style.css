@@ -3856,7 +3856,13 @@ div#mCSB_1_container{
   top: 50%;
   transform: translate(-50%,-50%);
 }
-
+/* multi-line clamp */
+.clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .main-footer .footer-widget .footer-logo{
   position: relative;
   display: block;

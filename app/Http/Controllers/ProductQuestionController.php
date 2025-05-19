@@ -5,42 +5,59 @@ namespace App\Http\Controllers;
 use App\Models\ProductQuestion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Http;
+use App\Models\Product;
+
 
 class ProductQuestionController extends Controller
-{   
+{
 
     public function index($productId)
-    {   
+    {
         $questions = ProductQuestion::where('product_id', $productId)
-                                    ->orderBy('created_at', 'desc')
-                                    ->get();
+            ->orderBy('created_at', 'desc')
+            ->get();
 
         return view('product.show', compact('questions'));
     }
 
     public function store(Request $request)
     {
-
         $request->validate([
             'product_id' => 'required|integer',
             'asker_name' => 'nullable|string|max:255',
             'question_text' => 'required|string',
         ]);
-        
 
-        // Set the asker_name to "Зочин" if null or empty
         $askerName = $request->input('asker_name') ?: 'Зочин';
-        
-        // Create the product question
-        // ProductQuestion::create($request->all());
-        ProductQuestion::create([
+
+        // ← Assign the created model to $question
+        $question = ProductQuestion::create([
             'product_id' => $request->input('product_id'),
             'asker_name' => $askerName,
             'question_text' => $request->input('question_text'),
         ]);
 
+        // ← Send the Telegram notification
+        $token = config('services.telegram.bot_token');
+        $chatId = config('services.telegram.chat_id');
+
+        $product = Product::find($question->product_id);
+        $productName = $product ? $product->name : "Product #{$question->product_id}";
+
+        $message = "🆕 *Шинэ асуулт* : *{$productName}*\n"
+            . "_From_: {$question->asker_name}\n"
+            . "_Q_: {$question->question_text}";
+
+        Http::post("https://api.telegram.org/bot{$token}/sendMessage", [
+            'chat_id' => $chatId,
+            'text' => $message,
+            'parse_mode' => 'Markdown',
+        ]);
+
         return redirect()->back()->with('success', 'Question submitted successfully!');
     }
+
 
     public function reply(Request $request, $id)
     {
