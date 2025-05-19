@@ -1,7 +1,15 @@
 <?php
 
 return [
-
+    // 'providers' => [
+    //     // Other providers
+    //     Intervention\Image\ImageServiceProvider::class,
+    // ],
+    
+    // 'aliases' => [
+    //     // Other aliases
+    //     'Image' => Intervention\Image\Facades\Image::class,
+    // ],
     /*
     |--------------------------------------------------------------------------
     | Application Name
