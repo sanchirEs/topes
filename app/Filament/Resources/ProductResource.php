@@ -27,15 +27,15 @@ class ProductResource extends Resource
                     ->relationship(name: 'Product_category', titleAttribute: 'name')
                     ->preload()
                     ->live()
-                    ->required(),
+                    // ->required(),
                 Forms\Components\TextInput::make('name')
-                    ->required()
+                    // ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
-                    ->required()
+                    // ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
-                    ->required()
+                    // ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('picture')
                     ->label('Picture 512*512')
@@ -47,9 +47,9 @@ class ProductResource extends Resource
                     ->default(0)
                     ->prefix('$'),
                 Forms\Components\Toggle::make('status')
-                    ->required(),
+                    // ->required(),
                 Forms\Components\TextInput::make('sort_order')
-                    ->required(),
+                    // ->required(),
             ]);
     }
 
