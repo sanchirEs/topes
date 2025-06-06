@@ -26,7 +26,7 @@ class ProductResource extends Resource
                 Forms\Components\Select::make('product_category_id')
                     ->relationship(name: 'Product_category', titleAttribute: 'name')
                     ->preload()
-                    ->live()
+                    ->live(),
                     // ->required(),
                 Forms\Components\TextInput::make('name')
                     // ->required()
@@ -46,9 +46,9 @@ class ProductResource extends Resource
                     ->numeric()
                     ->default(0)
                     ->prefix('$'),
-                Forms\Components\Toggle::make('status')
+                Forms\Components\Toggle::make('status'),
                     // ->required(),
-                Forms\Components\TextInput::make('sort_order')
+                Forms\Components\TextInput::make('sort_order'),
                     // ->required(),
             ]);
     }

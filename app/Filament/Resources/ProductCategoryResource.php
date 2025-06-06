@@ -26,19 +26,19 @@ class ProductCategoryResource extends Resource
         return $form
         ->schema([
             Forms\Components\TextInput::make('name')
-                ->required()
+                // ->required()
                 ->maxLength(255),
             Forms\Components\TextInput::make('link')
-                ->required()
+                // ->required()
                 ->maxLength(255),
             Forms\Components\TextInput::make('slug')
-                ->required()
+                // ->required()
                 ->maxLength(255),
             Forms\Components\TextInput::make('sort_order')
-                ->required()
+                // ->required()
                 ->numeric(),
             Forms\Components\Textarea::make('description')
-                ->required()
+                // ->required()
                 ->maxLength(25500),
         ]);
     }
