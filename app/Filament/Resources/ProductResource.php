@@ -26,16 +26,16 @@ class ProductResource extends Resource
                 Forms\Components\Select::make('product_category_id')
                     ->relationship(name: 'Product_category', titleAttribute: 'name')
                     ->preload()
-                    ->live()
-                    ->required(),
+                    ->live(),
+                    // ->required(),
                 Forms\Components\TextInput::make('name')
-                    ->required()
+                    // ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
-                    ->required()
+                    // ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
-                    ->required()
+                    // ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('picture')
                     ->label('Picture 512*512')
@@ -46,10 +46,10 @@ class ProductResource extends Resource
                     ->numeric()
                     ->default(0)
                     ->prefix('$'),
-                Forms\Components\Toggle::make('status')
-                    ->required(),
-                Forms\Components\TextInput::make('sort_order')
-                    ->required(),
+                Forms\Components\Toggle::make('status'),
+                    // ->required(),
+                Forms\Components\TextInput::make('sort_order'),
+                    // ->required(),
             ]);
     }
 
