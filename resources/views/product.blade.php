@@ -44,16 +44,16 @@
     <div class="pricing-details mb-4">
       <div class="d-flex justify-content-between mb-2">
         <span class="text-muted">Үнэ:</span>
-        <span class="fw-regular">{{ number_format($product->price) }}₮</span>
+        <span class="fw-regular">{{ number_format(round($product->price)) }}₮</span>
       </div>
       <div class="d-flex justify-content-between mb-2">
         <span class="text-muted">НӨАТ (10%):</span>
-        <span class="fw-regular text-success">{{ number_format($product->vat) }}₮</span>
+        <span class="fw-regular text-success">{{ number_format(round($product->price * 0.10)) }}₮</span>
       </div>
       <hr style="border-color:#e2e2e2;margin:0.5rem 0;">
       <div class="d-flex justify-content-between">
         <span class="fw-semibold">Нийт үнэ:</span>
-        <span class="fs_24">{{ number_format($product->total) }}₮</span>
+        <span class="fs_24">{{ number_format(round($product->price + ($product->price * 0.10))) }}₮</span>
       </div>
     </div>
 

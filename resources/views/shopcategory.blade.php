@@ -97,7 +97,7 @@
                                                                                 <h6 class="clamp-2 mb-2">{{ $product->name }}</h6>
                                                                                 <p class="clamp-2 mb-2">{!! Str::words($product->product, 10) !!}</p>
                                                                                 <div class="font-weight-bold" style="color: black;">
-                                                                                    {{ number_format($product->total, 0) }}₮
+                                                                                    {{ number_format(round($product->price), 0) }}₮
                                                                                 </div>
                                                                             </div>
                                                                         </div>
