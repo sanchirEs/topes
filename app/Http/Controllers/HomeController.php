@@ -48,7 +48,7 @@ class HomeController extends Controller
 
         $data['products'] = Product::where('Product_category_id',$id)->orderBy('sort_order','ASC')->paginate(9);
 
-        $data['categories'] = Product_category::where('id','!=',$id)->get();
+        $data['categories'] = Product_category::where('id','!=',$id)->orderBy('sort_order','ASC')->get();
 
         return view('shopcategory',$data);
     }

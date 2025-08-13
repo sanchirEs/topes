@@ -26,27 +26,30 @@ class ProductResource extends Resource
                 Forms\Components\Select::make('product_category_id')
                     ->relationship(name: 'Product_category', titleAttribute: 'name')
                     ->preload()
-                    ->live()
-                    ->required(),
+                    ->live(),
+                    // ->required(),
                 Forms\Components\TextInput::make('name')
-                    ->required()
+                    // ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('slug')
-                    ->required()
+                    // ->required()
                     ->maxLength(255),
                 Forms\Components\Textarea::make('description')
-                    ->required()
+                    // ->required()
                     ->columnSpanFull(),
                 Forms\Components\FileUpload::make('picture')
-                    ->label('Picture 270*250'),
+                    ->label('Picture 512*512')
+                    ->image()
+                    ->imageResizeMode('contain')
+                    ->imageResizeTargetWidth('512'),
                 Forms\Components\TextInput::make('price')
                     ->numeric()
                     ->default(0)
                     ->prefix('$'),
-                Forms\Components\Toggle::make('status')
-                    ->required(),
-                Forms\Components\TextInput::make('sort_order')
-                    ->required(),
+                Forms\Components\Toggle::make('status'),
+                    // ->required(),
+                Forms\Components\TextInput::make('sort_order'),
+                    // ->required(),
             ]);
     }
 
@@ -55,11 +58,14 @@ class ProductResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('Product_category.name')
+                    ->wrap()
                     ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('name')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
+                    ->wrap()
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('picture'),
                 Tables\Columns\TextColumn::make('price')
@@ -104,7 +110,7 @@ class ProductResource extends Resource
         return [
             'index' => Pages\ListProducts::route('/'),
             'create' => Pages\CreateProduct::route('/create'),
-            'view' => Pages\ViewProduct::route('/{record}'),
+            // 'view' => Pages\ViewProduct::route('/{record}'),
             'edit' => Pages\EditProduct::route('/{record}/edit'),
         ];
     }
