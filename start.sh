@@ -3,35 +3,80 @@
 # Set PORT default if not set
 PORT=${PORT:-8080}
 
-# Debug: Print database connection info
 echo "================================"
-echo "Database Configuration:"
-echo "DB_CONNECTION: $DB_CONNECTION"
-echo "DB_HOST: $DB_HOST"
-echo "DB_PORT: $DB_PORT"
-echo "DB_DATABASE: $DB_DATABASE"
-echo "DB_USERNAME: $DB_USERNAME"
+echo "TOPES Deployment Starting..."
 echo "================================"
 
-# Wait for MySQL to be ready (max 60 seconds)
+# Debug: Print database connection info
+echo ""
+echo "Database Configuration:"
+echo "----------------------"
+echo "DB_CONNECTION: ${DB_CONNECTION:-NOT SET}"
+echo "DB_HOST: ${DB_HOST:-NOT SET}"
+echo "DB_PORT: ${DB_PORT:-NOT SET}"
+echo "DB_DATABASE: ${DB_DATABASE:-NOT SET}"
+echo "DB_USERNAME: ${DB_USERNAME:-NOT SET}"
+echo "DB_PASSWORD: ${DB_PASSWORD:0:5}... (hidden)"
+echo ""
+
+# Test if we can resolve the DB_HOST
+if [ ! -z "$DB_HOST" ]; then
+  echo "Testing DNS resolution for DB_HOST..."
+  if getent hosts "$DB_HOST" > /dev/null 2>&1; then
+    echo "✓ DNS resolution successful for $DB_HOST"
+    getent hosts "$DB_HOST"
+  else
+    echo "✗ Cannot resolve hostname: $DB_HOST"
+    echo "This might be why connection is failing!"
+  fi
+  echo ""
+fi
+
+# Test if MySQL port is reachable
+if [ ! -z "$DB_HOST" ] && [ ! -z "$DB_PORT" ]; then
+  echo "Testing TCP connection to $DB_HOST:$DB_PORT..."
+  if timeout 5 bash -c "cat < /dev/null > /dev/tcp/$DB_HOST/$DB_PORT" 2>/dev/null; then
+    echo "✓ Port $DB_PORT is reachable on $DB_HOST"
+  else
+    echo "✗ Cannot connect to $DB_HOST:$DB_PORT"
+    echo "MySQL service might not be running or network issue exists"
+  fi
+  echo ""
+fi
+
+echo "================================"
+
+# Wait for MySQL to be ready (max 2 minutes)
 echo "Waiting for MySQL to be ready..."
-MAX_RETRIES=30
+echo "(This may take a while if MySQL is still starting up...)"
+MAX_RETRIES=40
 RETRY_COUNT=0
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
+  echo -n "Attempt $((RETRY_COUNT + 1))/$MAX_RETRIES: "
   if php artisan db:show 2>/dev/null; then
     echo "✓ MySQL is ready!"
     break
   else
+    echo "Not ready yet, waiting 3 seconds..."
     RETRY_COUNT=$((RETRY_COUNT + 1))
-    echo "MySQL not ready yet (attempt $RETRY_COUNT/$MAX_RETRIES)..."
-    sleep 2
+    sleep 3
   fi
 done
 
 if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
-  echo "⚠ Warning: Could not connect to MySQL after $MAX_RETRIES attempts"
-  echo "Continuing anyway... migrations may fail"
+  echo ""
+  echo "⚠⚠⚠ WARNING ⚠⚠⚠"
+  echo "Could not connect to MySQL after $MAX_RETRIES attempts"
+  echo ""
+  echo "Possible causes:"
+  echo "1. DB_HOST is incorrect (check value above)"
+  echo "2. MySQL service is not running"
+  echo "3. MySQL service takes longer to start (normal on first deploy)"
+  echo "4. Network connectivity issue between services"
+  echo ""
+  echo "Continuing anyway... migrations will likely fail"
+  echo ""
 fi
 
 # Link storage
