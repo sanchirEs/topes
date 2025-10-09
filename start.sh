@@ -54,7 +54,7 @@ MAX_RETRIES=60
 RETRY_COUNT=0
 CONNECTED=false
 
-# Create a simple PHP MySQL connection test
+# Create a PHP MySQL connection test that actually queries the database
 cat > /tmp/mysql_test.php << 'PHPTEST'
 <?php
 $host = getenv('DB_HOST') ?: '127.0.0.1';
@@ -70,8 +70,18 @@ try {
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ];
     $pdo = new PDO($dsn, $user, $pass, $options);
-    echo "SUCCESS";
-    exit(0);
+    
+    // Actually query the database to ensure it's ready
+    $stmt = $pdo->query('SELECT 1');
+    $result = $stmt->fetch();
+    
+    if ($result[0] == 1) {
+        echo "SUCCESS";
+        exit(0);
+    } else {
+        echo "FAILED: Query returned unexpected result";
+        exit(1);
+    }
 } catch (Exception $e) {
     echo "FAILED: " . $e->getMessage();
     exit(1);
@@ -80,13 +90,13 @@ PHPTEST
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
   RETRY_COUNT=$((RETRY_COUNT + 1))
-  echo -n "[$RETRY_COUNT/$MAX_RETRIES] Testing MySQL connection... "
+  echo -n "[$RETRY_COUNT/$MAX_RETRIES] Testing MySQL connection and query... "
   
-  # Try the PHP connection test first (more reliable than artisan)
+  # Try the PHP connection test
   RESULT=$(php /tmp/mysql_test.php 2>&1)
   
   if echo "$RESULT" | grep -q "SUCCESS"; then
-    echo "✓ Connected!"
+    echo "✓ Connected and verified!"
     CONNECTED=true
     break
   else
@@ -126,28 +136,51 @@ if [ "$CONNECTED" = false ]; then
   echo ""
   echo "Continuing anyway... migrations will fail but app will start"
   echo ""
+else
+  echo ""
+  echo "MySQL is ready! Waiting 5 seconds for stability..."
+  sleep 5
+  echo "✓ Ready to proceed"
+  echo ""
 fi
 
 # Link storage
 echo "Linking storage..."
 php artisan storage:link
+echo ""
 
-# Optimize application
+# Clear any old cached config (important!)
+echo "Clearing old configuration cache..."
+php artisan config:clear 2>/dev/null || echo "No cache to clear"
+echo ""
+
+# NOW optimize application AFTER MySQL is verified ready
 echo "Optimizing application..."
 php artisan optimize
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
+echo ""
 
 # Run migrations
 echo "Attempting database migrations..."
 if php artisan migrate --force; then
-  echo "✓ Migrations completed successfully"
+  echo ""
+  echo "✓✓✓ Migrations completed successfully! ✓✓✓"
+  echo ""
 else
-  echo "⚠ Migration failed - check database connection"
-  # Print last few lines of log for debugging
+  echo ""
+  echo "⚠⚠⚠ Migration failed ⚠⚠⚠"
+  echo "This is unusual since MySQL connection was verified."
+  echo ""
+  echo "Possible causes:"
+  echo "1. Database user lacks permission to create tables"
+  echo "2. Database already has conflicting data"
+  echo "3. Migration files have syntax errors"
+  echo ""
   echo "Checking Laravel logs..."
-  tail -n 20 storage/logs/laravel.log 2>/dev/null || echo "No logs available yet"
+  tail -n 30 storage/logs/laravel.log 2>/dev/null || echo "No logs available yet"
+  echo ""
 fi
 
 # Start the server
