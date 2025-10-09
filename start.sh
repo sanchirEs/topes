@@ -149,13 +149,18 @@ echo "Linking storage..."
 php artisan storage:link
 echo ""
 
-# Clear ALL Laravel caches (important!)
-echo "Clearing all Laravel caches..."
+# Clear non-database caches first (these don't need DB connection)
+echo "Clearing file-based caches..."
 php artisan config:clear 2>/dev/null || echo "Config cache already clear"
-php artisan cache:clear 2>/dev/null || echo "Cache already clear"
 php artisan route:clear 2>/dev/null || echo "Route cache already clear"
 php artisan view:clear 2>/dev/null || echo "View cache already clear"
-echo "✓ All caches cleared"
+echo "✓ File caches cleared (skipping database cache for now)"
+echo ""
+
+# Additional stability wait (Laravel connection pool needs time)
+echo "Waiting additional 10 seconds for MySQL connection pool stability..."
+sleep 10
+echo "✓ Ready for Laravel database operations"
 echo ""
 
 # Test with Laravel's actual database connection (not just PHP PDO)
@@ -182,6 +187,11 @@ if [ "$LARAVEL_CONNECTED" = false ]; then
   echo "⚠ Laravel cannot connect to MySQL even though PHP PDO can!"
   echo "This might be a Laravel configuration issue."
   echo "Continuing anyway..."
+else
+  # NOW clear database cache since Laravel can connect
+  echo "Clearing database cache (now that Laravel can connect)..."
+  php artisan cache:clear 2>/dev/null || echo "Cache clear skipped or already clear"
+  echo ""
 fi
 echo ""
 
