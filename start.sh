@@ -149,12 +149,43 @@ echo "Linking storage..."
 php artisan storage:link
 echo ""
 
-# Clear any old cached config (important!)
-echo "Clearing old configuration cache..."
-php artisan config:clear 2>/dev/null || echo "No cache to clear"
+# Clear ALL Laravel caches (important!)
+echo "Clearing all Laravel caches..."
+php artisan config:clear 2>/dev/null || echo "Config cache already clear"
+php artisan cache:clear 2>/dev/null || echo "Cache already clear"
+php artisan route:clear 2>/dev/null || echo "Route cache already clear"
+php artisan view:clear 2>/dev/null || echo "View cache already clear"
+echo "✓ All caches cleared"
 echo ""
 
-# NOW optimize application AFTER MySQL is verified ready
+# Test with Laravel's actual database connection (not just PHP PDO)
+echo "Testing Laravel database connection..."
+LARAVEL_TEST_ATTEMPTS=0
+LARAVEL_TEST_MAX=10
+LARAVEL_CONNECTED=false
+
+while [ $LARAVEL_TEST_ATTEMPTS -lt $LARAVEL_TEST_MAX ]; do
+  LARAVEL_TEST_ATTEMPTS=$((LARAVEL_TEST_ATTEMPTS + 1))
+  echo -n "  Attempt $LARAVEL_TEST_ATTEMPTS/$LARAVEL_TEST_MAX: "
+  
+  if php artisan db:show 2>/dev/null | grep -q "mysql"; then
+    echo "✓ Laravel can connect!"
+    LARAVEL_CONNECTED=true
+    break
+  else
+    echo "Failed, waiting 3 seconds..."
+    sleep 3
+  fi
+done
+
+if [ "$LARAVEL_CONNECTED" = false ]; then
+  echo "⚠ Laravel cannot connect to MySQL even though PHP PDO can!"
+  echo "This might be a Laravel configuration issue."
+  echo "Continuing anyway..."
+fi
+echo ""
+
+# NOW optimize application AFTER MySQL is verified ready with Laravel
 echo "Optimizing application..."
 php artisan optimize
 php artisan config:cache
@@ -162,24 +193,48 @@ php artisan route:cache
 php artisan view:cache
 echo ""
 
-# Run migrations
+# Run migrations with retry logic
 echo "Attempting database migrations..."
-if php artisan migrate --force; then
-  echo ""
+MIGRATION_ATTEMPTS=0
+MIGRATION_MAX=5
+MIGRATION_SUCCESS=false
+
+while [ $MIGRATION_ATTEMPTS -lt $MIGRATION_MAX ]; do
+  MIGRATION_ATTEMPTS=$((MIGRATION_ATTEMPTS + 1))
+  
+  if [ $MIGRATION_ATTEMPTS -gt 1 ]; then
+    echo ""
+    echo "Retry $MIGRATION_ATTEMPTS/$MIGRATION_MAX: Attempting migrations again after 5 second wait..."
+    sleep 5
+  fi
+  
+  if php artisan migrate --force 2>&1; then
+    MIGRATION_SUCCESS=true
+    break
+  else
+    echo "Migration attempt $MIGRATION_ATTEMPTS failed"
+  fi
+done
+
+echo ""
+if [ "$MIGRATION_SUCCESS" = true ]; then
   echo "✓✓✓ Migrations completed successfully! ✓✓✓"
   echo ""
 else
+  echo "⚠⚠⚠ Migration failed after $MIGRATION_MAX attempts ⚠⚠⚠"
   echo ""
-  echo "⚠⚠⚠ Migration failed ⚠⚠⚠"
   echo "This is unusual since MySQL connection was verified."
   echo ""
   echo "Possible causes:"
   echo "1. Database user lacks permission to create tables"
   echo "2. Database already has conflicting data"
   echo "3. Migration files have syntax errors"
+  echo "4. MySQL connection is unstable"
   echo ""
   echo "Checking Laravel logs..."
   tail -n 30 storage/logs/laravel.log 2>/dev/null || echo "No logs available yet"
+  echo ""
+  echo "App will start anyway, but database may not be initialized!"
   echo ""
 fi
 
