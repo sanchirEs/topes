@@ -158,9 +158,22 @@ echo "✓ File caches cleared (skipping database cache for now)"
 echo ""
 
 # Additional stability wait (Laravel connection pool needs time)
-echo "Waiting additional 10 seconds for MySQL connection pool stability..."
-sleep 10
+echo "Waiting additional 20 seconds for MySQL connection pool stability..."
+sleep 20
 echo "✓ Ready for Laravel database operations"
+echo ""
+
+# Debug: Test Laravel's actual database config
+echo "Debugging Laravel database configuration..."
+php -r "
+require 'vendor/autoload.php';
+\$app = require_once 'bootstrap/app.php';
+\$app->make('Illuminate\Contracts\Console\Kernel')->bootstrap();
+echo 'Laravel DB Host: ' . config('database.connections.mysql.host') . PHP_EOL;
+echo 'Laravel DB Port: ' . config('database.connections.mysql.port') . PHP_EOL;
+echo 'Laravel DB Name: ' . config('database.connections.mysql.database') . PHP_EOL;
+echo 'Laravel DB User: ' . config('database.connections.mysql.username') . PHP_EOL;
+" 2>&1 || echo "Could not load Laravel config"
 echo ""
 
 # Test with Laravel's actual database connection (not just PHP PDO)
