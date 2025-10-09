@@ -131,10 +131,48 @@ git push
 
 ---
 
+## Special Case: Connection Refused Despite Correct Config
+
+If your logs show:
+- ✅ DNS resolution successful
+- ✅ TCP port reachable
+- ❌ PDO connection fails ("Connection refused" or "Network unreachable")
+
+**This means MySQL is still starting up!**
+
+### What to Do:
+
+**Option A: Just Wait (Recommended)**
+- The updated script waits up to 4 minutes
+- MySQL typically needs 2-3 minutes on first deploy
+- Let it run - it will connect eventually
+
+**Option B: Deploy MySQL First, Then Web**
+1. Stop/delete web service deployment
+2. Wait for MySQL to show "Active" in Railway
+3. Redeploy web service
+4. It should connect immediately
+
+**Option C: Add Service Dependencies**
+1. Web Service → Settings → Dependencies
+2. Add MySQL as a dependency
+3. Railway will wait for MySQL before starting web
+
+### Why This Happens:
+
+Railway starts both services at the same time, but:
+- Web service: Ready in 1-2 minutes
+- MySQL service: Ready in 2-5 minutes (especially first deploy)
+
+The web service starts before MySQL is ready. **This is normal and will resolve automatically.**
+
+---
+
 ## Contact Points
 
-If you're still stuck, share:
+If you're still stuck after 4 minutes, share:
 1. The "Database Configuration" section from your logs
 2. Your MySQL service name (exact spelling)
 3. Whether MySQL service shows as "Active" in Railway
+4. MySQL service logs (check for ERROR or FATAL messages)
 

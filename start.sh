@@ -46,36 +46,85 @@ fi
 
 echo "================================"
 
-# Wait for MySQL to be ready (max 2 minutes)
+# Wait for MySQL to be ready (max 4 minutes)
 echo "Waiting for MySQL to be ready..."
-echo "(This may take a while if MySQL is still starting up...)"
-MAX_RETRIES=40
+echo "(MySQL takes 1-3 minutes to fully initialize on Railway...)"
+echo ""
+MAX_RETRIES=60
 RETRY_COUNT=0
+CONNECTED=false
+
+# Create a simple PHP MySQL connection test
+cat > /tmp/mysql_test.php << 'PHPTEST'
+<?php
+$host = getenv('DB_HOST') ?: '127.0.0.1';
+$port = getenv('DB_PORT') ?: '3306';
+$db = getenv('DB_DATABASE') ?: 'railway';
+$user = getenv('DB_USERNAME') ?: 'root';
+$pass = getenv('DB_PASSWORD') ?: '';
+
+try {
+    $dsn = "mysql:host=$host;port=$port;dbname=$db;charset=utf8mb4";
+    $options = [
+        PDO::ATTR_TIMEOUT => 5,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+    ];
+    $pdo = new PDO($dsn, $user, $pass, $options);
+    echo "SUCCESS";
+    exit(0);
+} catch (Exception $e) {
+    echo "FAILED: " . $e->getMessage();
+    exit(1);
+}
+PHPTEST
 
 while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-  echo -n "Attempt $((RETRY_COUNT + 1))/$MAX_RETRIES: "
-  if php artisan db:show 2>/dev/null; then
-    echo "✓ MySQL is ready!"
+  RETRY_COUNT=$((RETRY_COUNT + 1))
+  echo -n "[$RETRY_COUNT/$MAX_RETRIES] Testing MySQL connection... "
+  
+  # Try the PHP connection test first (more reliable than artisan)
+  RESULT=$(php /tmp/mysql_test.php 2>&1)
+  
+  if echo "$RESULT" | grep -q "SUCCESS"; then
+    echo "✓ Connected!"
+    CONNECTED=true
     break
   else
-    echo "Not ready yet, waiting 3 seconds..."
-    RETRY_COUNT=$((RETRY_COUNT + 1))
-    sleep 3
+    # Show the actual error for first few attempts
+    if [ $RETRY_COUNT -le 3 ]; then
+      echo "Failed: $RESULT"
+    else
+      echo "Not ready yet..."
+    fi
+    
+    # Progressive backoff: first 10 tries = 3s, then 5s
+    if [ $RETRY_COUNT -lt 10 ]; then
+      sleep 3
+    else
+      sleep 5
+    fi
   fi
 done
 
-if [ $RETRY_COUNT -eq $MAX_RETRIES ]; then
+# Clean up test file
+rm -f /tmp/mysql_test.php
+
+if [ "$CONNECTED" = false ]; then
   echo ""
   echo "⚠⚠⚠ WARNING ⚠⚠⚠"
-  echo "Could not connect to MySQL after $MAX_RETRIES attempts"
+  echo "Could not connect to MySQL after $MAX_RETRIES attempts (4 minutes)"
   echo ""
-  echo "Possible causes:"
-  echo "1. DB_HOST is incorrect (check value above)"
-  echo "2. MySQL service is not running"
-  echo "3. MySQL service takes longer to start (normal on first deploy)"
-  echo "4. Network connectivity issue between services"
+  echo "Common causes on Railway:"
+  echo "1. MySQL is STILL starting up (this can take 3-5 minutes on first deploy)"
+  echo "2. IPv6/IPv4 networking issue"
+  echo "3. MySQL service crashed or failed to start"
   echo ""
-  echo "Continuing anyway... migrations will likely fail"
+  echo "RECOMMENDED ACTION:"
+  echo "- Check MySQL service logs in Railway dashboard"
+  echo "- Wait for MySQL to show 'Active' status"
+  echo "- Then redeploy this web service"
+  echo ""
+  echo "Continuing anyway... migrations will fail but app will start"
   echo ""
 fi
 
