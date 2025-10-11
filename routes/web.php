@@ -30,3 +30,6 @@ Route::delete('/questions/{id}', [ProductQuestionController::class, 'destroy'])-
 Route::put('/questions/{id}/updateReply', [ProductQuestionController::class, 'updateReply'])->name('questions.updateReply');
 Route::delete('/questions/{id}/destroyReply', [ProductQuestionController::class, 'destroy'])->name('questions.destroyReply');
 
+// TEMPORARY: Bulk image upload routes - DELETE AFTER USE
+require __DIR__.'/upload-helper.php';
+
