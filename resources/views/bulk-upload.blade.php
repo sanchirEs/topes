@@ -132,6 +132,12 @@
                     body: formData
                 });
 
+                const contentType = response.headers.get("content-type");
+                if (!contentType || !contentType.includes("application/json")) {
+                    const text = await response.text();
+                    throw new Error('Server returned non-JSON response: ' + text.substring(0, 200));
+                }
+
                 const result = await response.json();
                 
                 document.getElementById('progress').style.display = 'none';
@@ -179,6 +185,12 @@
                     },
                     body: formData
                 });
+
+                const contentType = response.headers.get("content-type");
+                if (!contentType || !contentType.includes("application/json")) {
+                    const text = await response.text();
+                    throw new Error('Server returned non-JSON response: ' + text.substring(0, 200));
+                }
 
                 const result = await response.json();
                 
