@@ -3,6 +3,14 @@
 # Set PORT default if not set
 PORT=${PORT:-8080}
 
+# Copy PHP configuration (increase upload limits)
+if [ -f php.ini ]; then
+    echo "Copying PHP configuration to increase upload limits..."
+    cp php.ini /etc/php/*/cli/conf.d/99-custom.ini 2>/dev/null || true
+    cp php.ini /etc/php/*/fpm/conf.d/99-custom.ini 2>/dev/null || true
+    echo "✓ PHP limits configured"
+fi
+
 echo "================================"
 echo "TOPES Deployment Starting..."
 echo "================================"
