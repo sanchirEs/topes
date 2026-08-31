@@ -251,6 +251,17 @@ echo ""
 if [ "$MIGRATION_SUCCESS" = true ]; then
   echo "✓✓✓ Migrations completed successfully! ✓✓✓"
   echo ""
+
+  # Restore the recovered catalog and publish product images onto the volume.
+  # Idempotent: rows are upserted by id, and images already on the volume are
+  # left untouched, so this is safe to run on every deploy.
+  echo "Seeding recovered catalog and publishing product images..."
+  if php artisan db:seed --class=RecoveredCatalogSeeder --force 2>&1; then
+    echo "✓ Catalog seeded and images published"
+  else
+    echo "⚠ Catalog seeding failed — site will start, but product images may be missing"
+  fi
+  echo ""
 else
   echo "⚠⚠⚠ Migration failed after $MIGRATION_MAX attempts ⚠⚠⚠"
   echo ""
