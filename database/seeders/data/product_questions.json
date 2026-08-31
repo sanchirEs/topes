@@ -1,0 +1,62 @@
+[
+    {
+        "id": 11,
+        "product_id": 560,
+        "asker_name": "sanchir",
+        "question_text": "uldegdel baigaayu",
+        "answer_text": "77114532",
+        "answered_by": "Админ",
+        "status": 1,
+        "created_at": "2025-05-17 08:59:24",
+        "answered_at": null,
+        "updated_at": "2025-05-18 06:47:23"
+    },
+    {
+        "id": 12,
+        "product_id": 660,
+        "asker_name": "94576068",
+        "question_text": "hayag haana we?",
+        "answer_text": null,
+        "answered_by": null,
+        "status": 0,
+        "created_at": "2025-05-17 09:02:37",
+        "answered_at": null,
+        "updated_at": "2025-05-17 09:02:37"
+    },
+    {
+        "id": 13,
+        "product_id": 563,
+        "asker_name": "зочин",
+        "question_text": "энэ байгааюу",
+        "answer_text": null,
+        "answered_by": null,
+        "status": 0,
+        "created_at": "2025-05-17 09:18:35",
+        "answered_at": null,
+        "updated_at": "2025-05-17 09:18:35"
+    },
+    {
+        "id": 14,
+        "product_id": 561,
+        "asker_name": "94576068",
+        "question_text": "sn bnu",
+        "answer_text": null,
+        "answered_by": null,
+        "status": 0,
+        "created_at": "2025-05-18 06:39:02",
+        "answered_at": null,
+        "updated_at": "2025-05-18 06:39:02"
+    },
+    {
+        "id": 18,
+        "product_id": 569,
+        "asker_name": "94576068",
+        "question_text": "baigaayu",
+        "answer_text": "Байгаа",
+        "answered_by": "Админ",
+        "status": 1,
+        "created_at": "2025-05-18 11:06:46",
+        "answered_at": null,
+        "updated_at": "2025-05-18 11:08:42"
+    }
+]

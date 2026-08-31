@@ -22,3 +22,8 @@ yarn-error.log
 /.vscode
 /.zed
 .qodo
+
+# Created per-environment by `php artisan storage:link` (start.sh runs it on deploy)
+/public/storage
+# Local recovery working area (full 37MB dump incl. sessions, duplicate copies)
+/recovered
