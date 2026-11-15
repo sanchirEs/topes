@@ -58,7 +58,11 @@ return [
             'strict' => true,
             'engine' => null,
             'options' => extension_loaded('pdo_mysql') ? array_filter([
-                PDO::ATTR_TIMEOUT => 60,
+                // Connect timeout only. Laravel makes up to 4 connect attempts
+                // per failed request, so 60s held each request ~4 minutes when
+                // MySQL was down, which starved `artisan serve` and took the
+                // whole site down (2026-11-15). 3s fails in about 12s instead.
+                PDO::ATTR_TIMEOUT => (int) env('DB_TIMEOUT', 3),
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                 PDO::ATTR_EMULATE_PREPARES => true,
                 PDO::ATTR_PERSISTENT => false,
